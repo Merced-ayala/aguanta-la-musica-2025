@@ -5,8 +5,9 @@ export interface Servicio {
   titulo: string;
   descripcion: string;
   publicoObjetivo: string;
-  duracion: string;
-  modalidad: string;
+  imagen: string;
+  duracion?: string;
+  modalidad?: string;
 }
 
 export const getServicios = (): Servicio[] => {
