@@ -21,8 +21,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-display font-bold text-xl text-primary">
-            Aguanta la Música
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/images/logo-blanco.png" 
+              alt="Aguanta la Música" 
+              className="h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}
