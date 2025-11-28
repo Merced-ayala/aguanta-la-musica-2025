@@ -1,34 +1,23 @@
 [
   {
     "id": 1,
-    "titulo": "Sesiones Individuales para Adultos",
-    "descripcion": "Espacio terapéutico personalizado donde utilizamos la música como herramienta para el autoconocimiento, la expresión emocional y el bienestar integral. Ideal para gestionar el estrés, procesar emociones y encontrar nuevas formas de expresión.",
-    "publicoObjetivo": "Adultos que buscan apoyo emocional y crecimiento personal",
-    "duracion": "60 minutos",
-    "modalidad": "Presencial en Bogotá o Virtual"
+    "titulo": "Talleres",
+    "descripcion": "Experiencias diseñadas a la medida de tus necesidades en áreas como yoga, relajación, liderazgo, gestión emocional, creatividad, manejo del estrés, trabajo en equipo.",
+    "publicoObjetivo": "Empresas y organizaciones",
+    "imagen": "/images/servicios/sesiones.jpeg"
   },
   {
     "id": 2,
-    "titulo": "Programas para Empresas",
-    "descripcion": "Talleres y programas de musicoterapia diseñados para mejorar el ambiente laboral, reducir el estrés, fortalecer el trabajo en equipo y potenciar la creatividad de los equipos. Experiencias musicales que transforman la cultura organizacional.",
-    "publicoObjetivo": "Empresas y organizaciones",
-    "duracion": "Programas personalizados",
-    "modalidad": "Presencial o Virtual"
+    "titulo": "Sesiones individuales",
+    "descripcion": "Musicoterapia, canto y técnica vocal, percusión, y metales. Nuestros expertos te guiarán en tu proceso de crecimiento con la música.",
+    "publicoObjetivo": "Personas que buscan crecimiento personal",
+    "imagen": "/images/servicios/sesiones.jpeg"
   },
   {
     "id": 3,
-    "titulo": "Talleres para Instituciones Educativas",
-    "descripcion": "Programas de musicoterapia adaptados para instituciones educativas, enfocados en el desarrollo socioemocional, la gestión de emociones y el fortalecimiento de las habilidades para la vida. Creamos experiencias musicales significativas para estudiantes y docentes.",
-    "publicoObjetivo": "Colegios, universidades y centros educativos",
-    "duracion": "Programas personalizados",
-    "modalidad": "Presencial"
-  },
-  {
-    "id": 4,
-    "titulo": "Grupos Terapéuticos",
-    "descripcion": "Sesiones grupales donde la música facilita la conexión, la expresión y el apoyo mutuo. Un espacio seguro para compartir, crear juntos y explorar el potencial sanador de la música en comunidad.",
-    "publicoObjetivo": "Grupos de hasta 10 personas",
-    "duracion": "90 minutos",
-    "modalidad": "Presencial en Bogotá"
+    "titulo": "Procesos grupales de musicoterapia",
+    "descripcion": "Proceso continuo para grupos en los que la terapia busca incidir en cómo los participantes se relacionan con su entorno, sus valores comunes y posibilidades. Ideal para empresas y otra comunidades.",
+    "publicoObjetivo": "Grupos y comunidades",
+    "imagen": "/images/servicios/sesiones.jpeg"
   }
 ]

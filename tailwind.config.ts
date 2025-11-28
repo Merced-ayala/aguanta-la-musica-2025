@@ -16,6 +16,10 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
         display: ['Montserrat', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        'heading': '700',
       },
       colors: {
         border: "hsl(var(--border))",
