@@ -65,22 +65,15 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Acerca de <span className="text-[#EA2336]">Nosotros</span>
           </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
             En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
-        </div>
-      </section>
 
-      {/* Sección Misión - Visión - Valores */}
-      <section className="w-full bg-white py-12">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Nuestra Misión */}
+            {/* Misión */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
-              <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                </svg>
+              <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
+                <span className="text-[#EA2336] text-4xl">♪</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Nuestra Misión</h3>
               <p className="text-gray-700">
@@ -88,12 +81,10 @@ const About = () => {
               </p>
             </div>
 
-            {/* Nuestra Visión */}
+            {/* Visión */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
-              <div className="w-20 h-20 rounded-full bg-[#FFAC03] flex items-center justify-center mb-4">
-                <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
+                <span className="text-[#FFAC03] text-4xl">◎</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Nuestra Visión</h3>
               <p className="text-gray-700">
@@ -101,12 +92,10 @@ const About = () => {
               </p>
             </div>
 
-            {/* Nuestros Valores */}
+            {/* Valores */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
-              <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
+                <span className="text-gray-900 text-4xl">♡</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Nuestros Valores</h3>
               <p className="text-gray-700">
@@ -116,6 +105,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
 
       {/* Sección "Hola, soy David Caycedo" */}
       <section className="relative w-full min-h-[70vh] text-white">
