@@ -140,14 +140,20 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Conoce más + Talleres - Detalle */}
-      <section className="w-full bg-[#C4AF00] py-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black mb-10">
-          Conoce más
-        </h1>
+      {/* Espacio decorativo */}
+      <section className="w-full bg-[#C4AF00] py-8">
       </section>
 
+      {/* Conoce más + Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 mb-12">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black mb-6">
+            Conoce más
+          </h1>
+          <p className="text-center text-lg text-gray-800 max-w-3xl mx-auto">
+            Aquí encontrarás una explicación clara de nuestros servicios: talleres, sesiones individuales y procesos grupales. Explora cada opción para conocer cómo la musicoterapia puede acompañar tu bienestar personal o el de tu equipo.
+          </p>
+        </div>
         <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
           <div className="w-full">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
