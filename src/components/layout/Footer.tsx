@@ -3,12 +3,12 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t border-border">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-display font-bold text-lg mb-4">Aguanta la Música</h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/80">
               Creamos experiencias musicales significativas para personas, entidades y empresas.
             </p>
           </div>
@@ -17,17 +17,17 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Enlaces</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-white/80 hover:text-primary transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/servicios" className="text-white/80 hover:text-primary transition-colors">
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="text-white/80 hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
@@ -41,7 +41,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/merced-ayala"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white/80 hover:text-primary transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white/80 hover:text-primary transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -57,8 +57,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2025 Aguanta la Música. Todos los derechos reservados.</p>
+        <div className="mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+          <p className="text-white/80">© {new Date().getFullYear()} Aguanta la Música. Todos los derechos reservados.</p>
+          <a
+            href="https://www.linkedin.com/in/merced-ayala-6005b122b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white underline hover:text-gray-300 transition-colors"
+          >
+            Desarrollado por Merced Ayala
+          </a>
         </div>
       </div>
     </footer>

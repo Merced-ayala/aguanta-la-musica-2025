@@ -98,31 +98,33 @@ const About = () => {
         </section>
 
         {/* Nuestro Equipo */}
-        <section className="mb-16">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4">
-            Nuestro <span className="text-primary">Equipo</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
-          </p>
+        <section className="mb-16 -mx-4 px-4 py-16 bg-[#EA2336]">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4 text-black">
+              Nuestro Equipo
+            </h2>
+            <p className="text-center text-black mb-12 max-w-3xl mx-auto">
+              Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
+            </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-muted rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-heading font-bold text-xl mb-2">{member.name}</h3>
-                  <p className="text-sm text-primary font-semibold mb-3">{member.role}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {member.description}
-                  </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow p-6">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+                  />
+                  <div className="text-center">
+                    <h3 className="font-heading font-bold text-xl mb-2 text-black">{member.name}</h3>
+                    <p className="text-sm text-[#EA2336] font-semibold mb-3">{member.role}</p>
+                    <p className="text-sm text-black/80 leading-relaxed">
+                      {member.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
       </div>
