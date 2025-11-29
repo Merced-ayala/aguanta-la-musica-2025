@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticulos, getCategorias } from "@/services/articulosService";
 
 const Blog = () => {
@@ -26,69 +24,68 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="font-display font-bold text-4xl md:text-5xl mb-4">
-            Blog
-          </h1>
-          <p className="text-lg text-muted-foreground">
+    <div style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+      <div className="container">
+        <div className="text-center mb-5">
+          <h1 className="mb-3">Blog</h1>
+          <p className="lead text-muted">
             Artículos sobre musicoterapia, bienestar y salud mental
           </p>
         </div>
 
         {/* Filtros de categoría */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="d-flex flex-wrap justify-content-center gap-3 mb-5">
           {categorias.map((categoria) => (
-            <Button
+            <button
               key={categoria}
-              variant={categoriaSeleccionada === categoria ? "default" : "outline"}
+              className={`btn ${
+                categoriaSeleccionada === categoria
+                  ? "btn-principal"
+                  : "btn-outline-secondary"
+              }`}
               onClick={() => setCategoriaSeleccionada(categoria)}
             >
               {categoria}
-            </Button>
+            </button>
           ))}
         </div>
 
         {/* Grid de artículos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="row g-4">
           {articulosFiltrados.map((articulo) => (
-            <Card key={articulo.id} className="hover:shadow-lg transition-shadow flex flex-col">
-              <img
-                src={articulo.imagen}
-                alt={articulo.titulo}
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
-              <CardHeader>
-                <div className="text-xs font-semibold text-primary mb-2">
-                  {articulo.categoria}
+            <div key={articulo.id} className="col-md-4">
+              <div className="blog-card">
+                <img
+                  src={articulo.imagen}
+                  alt={articulo.titulo}
+                />
+                <div className="card-body">
+                  <div className="badge bg-primary-custom mb-2">
+                    {articulo.categoria}
+                  </div>
+                  <h3>{articulo.titulo}</h3>
+                  <p className="card-text text-muted">
+                    {articulo.extracto}
+                  </p>
+                  <div className="text-muted small mb-3">
+                    {new Date(articulo.fechaPublicacion).toLocaleDateString("es-ES", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </div>
+                  <Link to={`/blog/${articulo.slug}`} className="btn btn-principal w-100">
+                    Leer más
+                  </Link>
                 </div>
-                <CardTitle className="text-xl">{articulo.titulo}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <p className="text-sm text-muted-foreground line-clamp-4">
-                  {articulo.extracto}
-                </p>
-                <div className="mt-4 text-xs text-muted-foreground">
-                  {new Date(articulo.fechaPublicacion).toLocaleDateString("es-ES", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild variant="ghost" className="w-full">
-                  <Link to={`/blog/${articulo.slug}`}>Leer más</Link>
-                </Button>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
         {articulosFiltrados.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-lg text-muted-foreground">
+          <div className="text-center py-5">
+            <p className="lead text-muted">
               No hay artículos en esta categoría todavía.
             </p>
           </div>
