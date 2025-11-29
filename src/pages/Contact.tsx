@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -18,13 +22,14 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<FormValues>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      nombre: "",
+      email: "",
+      asunto: "",
+      mensaje: "",
+    },
   });
 
   useEffect(() => {
@@ -51,68 +56,65 @@ const Contact = () => {
       description: "Gracias por contactarnos. Te responderemos pronto.",
     });
     
-    reset();
+    form.reset();
     setIsSubmitting(false);
   };
 
   return (
-    <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
-      <div className="container" style={{ maxWidth: '80rem' }}>
-        <div className="text-center mb-5">
-          <h1 className="font-heading fw-bold display-4 mb-3">
+    <div className="min-h-screen pt-24 pb-20 px-4">
+      <div className="container mx-auto max-w-5xl">
+        <div className="text-center mb-12">
+          <h1 className="font-display font-bold text-4xl md:text-5xl mb-4">
             Contáctanos
           </h1>
-          <p className="fs-5 text-muted">
+          <p className="text-lg text-muted-foreground">
             Estamos aquí para acompañarte. Escríbenos y conversemos sobre cómo podemos ayudarte.
           </p>
         </div>
 
-        <div className="row g-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Información de contacto */}
-          <div className="col-md-6">
-            <h2 className="font-heading fw-bold h4 mb-4">Información de Contacto</h2>
+          <div>
+            <h2 className="font-display font-bold text-2xl mb-6">Información de Contacto</h2>
             
-            <div className="d-flex flex-column gap-4">
-              <div className="d-flex align-items-start">
-                <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 me-3" 
-                     style={{ width: '3rem', height: '3rem', backgroundColor: 'rgba(232, 37, 55, 0.1)' }}>
-                  <Mail size={20} style={{ color: 'var(--color-primary)' }} />
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mr-4 flex-shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="fw-semibold mb-1 h6">Email</h3>
-                  <p className="text-muted mb-0">contacto@aguantalamusica.com</p>
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-muted-foreground">contacto@aguantalamusica.com</p>
                 </div>
               </div>
 
-              <div className="d-flex align-items-start">
-                <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 me-3" 
-                     style={{ width: '3rem', height: '3rem', backgroundColor: 'rgba(251, 172, 24, 0.1)' }}>
-                  <Phone size={20} style={{ color: 'var(--color-secondary)' }} />
+              <div className="flex items-start">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 mr-4 flex-shrink-0">
+                  <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="fw-semibold mb-1 h6">Teléfono</h3>
-                  <p className="text-muted mb-0">+57 300 123 4567</p>
+                  <h3 className="font-semibold mb-1">Teléfono</h3>
+                  <p className="text-muted-foreground">+57 300 123 4567</p>
                 </div>
               </div>
 
-              <div className="d-flex align-items-start">
-                <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 me-3" 
-                     style={{ width: '3rem', height: '3rem', backgroundColor: 'rgba(192, 216, 76, 0.1)' }}>
-                  <MapPin size={20} style={{ color: 'var(--color-accent)' }} />
+              <div className="flex items-start">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mr-4 flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-accent-foreground" />
                 </div>
                 <div>
-                  <h3 className="fw-semibold mb-1 h6">Ubicación</h3>
-                  <p className="text-muted mb-0">Bogotá, Colombia</p>
-                  <p className="text-muted small mt-1">
+                  <h3 className="font-semibold mb-1">Ubicación</h3>
+                  <p className="text-muted-foreground">Bogotá, Colombia</p>
+                  <p className="text-sm text-muted-foreground mt-1">
                     También ofrecemos sesiones virtuales
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 p-4 rounded" style={{ background: 'linear-gradient(to bottom right, rgba(232, 37, 55, 0.1), rgba(251, 172, 24, 0.1))' }}>
-              <h3 className="fw-semibold mb-2 h6">Horario de Atención</h3>
-              <p className="text-muted small mb-0">
+            <div className="mt-8 p-6 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
+              <h3 className="font-semibold mb-2">Horario de Atención</h3>
+              <p className="text-sm text-muted-foreground">
                 Lunes a Viernes: 9:00 AM - 7:00 PM<br />
                 Sábados: 9:00 AM - 2:00 PM
               </p>
@@ -120,70 +122,76 @@ const Contact = () => {
           </div>
 
           {/* Formulario de contacto */}
-          <div className="col-md-6">
-            <h2 className="font-heading fw-bold h4 mb-4">Envíanos un Mensaje</h2>
+          <div>
+            <h2 className="font-display font-bold text-2xl mb-6">Envíanos un Mensaje</h2>
             
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-3">
-                <label htmlFor="nombre" className="form-label">Nombre completo</label>
-                <input
-                  type="text"
-                  className={`form-control ${errors.nombre ? 'is-invalid' : ''}`}
-                  id="nombre"
-                  placeholder="Tu nombre"
-                  {...register("nombre")}
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <FormField
+                  control={form.control}
+                  name="nombre"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Nombre completo</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Tu nombre" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-                {errors.nombre && (
-                  <div className="invalid-feedback">{errors.nombre.message}</div>
-                )}
-              </div>
 
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email</label>
-                <input
-                  type="email"
-                  className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                  id="email"
-                  placeholder="tu@email.com"
-                  {...register("email")}
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="tu@email.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-                {errors.email && (
-                  <div className="invalid-feedback">{errors.email.message}</div>
-                )}
-              </div>
 
-              <div className="mb-3">
-                <label htmlFor="asunto" className="form-label">Asunto</label>
-                <input
-                  type="text"
-                  className={`form-control ${errors.asunto ? 'is-invalid' : ''}`}
-                  id="asunto"
-                  placeholder="¿En qué podemos ayudarte?"
-                  {...register("asunto")}
+                <FormField
+                  control={form.control}
+                  name="asunto"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Asunto</FormLabel>
+                      <FormControl>
+                        <Input placeholder="¿En qué podemos ayudarte?" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-                {errors.asunto && (
-                  <div className="invalid-feedback">{errors.asunto.message}</div>
-                )}
-              </div>
 
-              <div className="mb-3">
-                <label htmlFor="mensaje" className="form-label">Mensaje</label>
-                <textarea
-                  className={`form-control ${errors.mensaje ? 'is-invalid' : ''}`}
-                  id="mensaje"
-                  rows={5}
-                  placeholder="Cuéntanos más sobre lo que necesitas..."
-                  {...register("mensaje")}
-                ></textarea>
-                {errors.mensaje && (
-                  <div className="invalid-feedback">{errors.mensaje.message}</div>
-                )}
-              </div>
+                <FormField
+                  control={form.control}
+                  name="mensaje"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mensaje</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Cuéntanos más sobre lo que necesitas..."
+                          className="min-h-[150px]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <button type="submit" className="btn btn-primary w-100" disabled={isSubmitting}>
-                {isSubmitting ? "Enviando..." : "Enviar mensaje"}
-              </button>
-            </form>
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
       </div>

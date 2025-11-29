@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { getArticuloBySlug } from "@/services/articulosService";
 
@@ -22,41 +23,43 @@ const BlogDetail = () => {
 
   if (!articulo) {
     return (
-      <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
-        <div className="container text-center" style={{ maxWidth: '48rem' }}>
-          <h1 className="font-heading fw-bold h3 mb-4">Artículo no encontrado</h1>
-          <p className="text-muted mb-4">
+      <div className="min-h-screen pt-24 pb-20 px-4">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h1 className="font-display font-bold text-3xl mb-4">Artículo no encontrado</h1>
+          <p className="text-muted-foreground mb-8">
             Lo sentimos, el artículo que buscas no existe.
           </p>
-          <Link to="/blog" className="btn btn-primary">Volver al blog</Link>
+          <Button asChild>
+            <Link to="/blog">Volver al blog</Link>
+          </Button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
-      <article className="container" style={{ maxWidth: '48rem' }}>
-        <button
-          className="btn btn-link text-decoration-none mb-4"
+    <div className="min-h-screen pt-24 pb-20 px-4">
+      <article className="container mx-auto max-w-3xl">
+        <Button
+          variant="ghost"
           onClick={() => navigate("/blog")}
+          className="mb-6"
         >
-          <ArrowLeft size={16} className="me-2" />
+          <ArrowLeft className="w-4 h-4 mr-2" />
           Volver al blog
-        </button>
+        </Button>
 
-        <div className="mb-4">
-          <span className="badge rounded-pill text-primary mb-3" 
-                style={{ backgroundColor: 'rgba(232, 37, 55, 0.1)', fontSize: '0.75rem' }}>
+        <div className="mb-6">
+          <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-4">
             {articulo.categoria}
           </span>
-          <h1 className="font-heading fw-bold display-5 mb-4">
+          <h1 className="font-display font-bold text-3xl md:text-5xl mb-4">
             {articulo.titulo}
           </h1>
           
-          <div className="d-flex flex-wrap gap-4 text-muted small mb-4">
-            <div className="d-flex align-items-center">
-              <Calendar size={16} className="me-2" />
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+            <div className="flex items-center">
+              <Calendar className="w-4 h-4 mr-2" />
               <span>
                 {new Date(articulo.fechaPublicacion).toLocaleDateString("es-ES", {
                   year: "numeric",
@@ -65,8 +68,8 @@ const BlogDetail = () => {
                 })}
               </span>
             </div>
-            <div className="d-flex align-items-center">
-              <User size={16} className="me-2" />
+            <div className="flex items-center">
+              <User className="w-4 h-4 mr-2" />
               <span>{articulo.autor}</span>
             </div>
           </div>
@@ -75,17 +78,18 @@ const BlogDetail = () => {
         <img
           src={articulo.imagen}
           alt={articulo.titulo}
-          className="w-100 rounded mb-5"
-          style={{ height: '20rem', objectFit: 'cover' }}
+          className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
         />
 
         <div
-          className="prose"
+          className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: articulo.contenidoHtml }}
         />
 
-        <div className="mt-5 pt-4 border-top">
-          <Link to="/blog" className="btn btn-primary">Volver al blog</Link>
+        <div className="mt-12 pt-8 border-t border-border">
+          <Button asChild>
+            <Link to="/blog">Volver al blog</Link>
+          </Button>
         </div>
       </article>
     </div>
