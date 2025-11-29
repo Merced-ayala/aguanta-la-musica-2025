@@ -22,8 +22,14 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto relative z-10 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            {/* Left Column - Logo and Text */}
-            
+            {/* Left Column - Logo */}
+            <div className="flex justify-center md:justify-start items-center">
+              <img 
+                src="/images/logo-blanco-hero.png" 
+                alt="Aguanta la Música" 
+                className="w-full max-w-md"
+              />
+            </div>
 
             {/* Right Column - Heading and Description */}
             <div className="text-center md:text-left space-y-6">
