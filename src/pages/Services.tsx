@@ -21,11 +21,11 @@ const Services = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           {/* Título y subtítulo */}
           <div className="text-center mb-16">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 drop-shadow-lg">
               <span className="text-black">Nuestros </span>
               <span className="text-white">Servicios</span>
             </h1>
-            <p className="text-lg text-white max-w-3xl mx-auto">
+            <p className="text-lg text-white max-w-3xl mx-auto drop-shadow-md">
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
@@ -156,10 +156,10 @@ const Services = () => {
       {/* Conoce más + Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-6 drop-shadow-lg">
             Conoce más
           </h1>
-          <p className="text-center text-lg text-white max-w-3xl mx-auto">
+          <p className="text-center text-lg text-white max-w-3xl mx-auto drop-shadow-md">
             Aquí encontrarás una explicación clara de nuestros servicios: talleres, sesiones individuales y procesos grupales. Explora cada opción para conocer cómo la musicoterapia puede acompañar tu bienestar personal o el de tu equipo.
           </p>
         </div>
