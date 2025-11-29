@@ -23,9 +23,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
             <img 
-              src="/images/logo-blanco.png" 
+              src="/images/logo-aguanta.png" 
               alt="Aguanta la Música" 
-              className="h-12"
+              className="h-16"
             />
           </Link>
 
