@@ -58,11 +58,11 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        {/* Sección David Caycedo */}
-        <section className="mb-16 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 rounded-lg">
+    <div className="min-h-screen pt-24 pb-20">
+      {/* Sección David Caycedo */}
+      <section className="w-full bg-background py-12">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 rounded-lg max-w-4xl mx-auto">
             <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
               ¡Hola! Soy <span className="text-primary">David Caycedo Galvis</span>
             </h1>
@@ -78,56 +78,60 @@ const About = () => {
               ¡Sígueme en LinkedIn!
             </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Misión y Visión */}
-        <section className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
-          <div className="bg-muted p-8 rounded-lg">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Misión</h2>
-            <p className="text-muted-foreground">
-              Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
-            </p>
-          </div>
+      {/* Misión y Visión */}
+      <section className="w-full bg-background py-12">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-muted p-8 rounded-lg">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Misión</h2>
+              <p className="text-muted-foreground">
+                Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
+              </p>
+            </div>
 
-          <div className="bg-muted p-8 rounded-lg">
-            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Visión</h2>
-            <p className="text-muted-foreground">
-              Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
-            </p>
-          </div>
-        </section>
-
-        {/* Nuestro Equipo */}
-        <section className="mb-16 -mx-4 px-4 py-16 bg-[#EA2336]">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4 text-black">
-              Nuestro Equipo
-            </h2>
-            <p className="text-center text-black mb-12 max-w-3xl mx-auto">
-              Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow p-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
-                  />
-                  <div className="text-center">
-                    <h3 className="font-heading font-bold text-xl mb-2 text-black">{member.name}</h3>
-                    <p className="text-sm text-[#EA2336] font-semibold mb-3">{member.role}</p>
-                    <p className="text-sm text-black/80 leading-relaxed">
-                      {member.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            <div className="bg-muted p-8 rounded-lg">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Visión</h2>
+              <p className="text-muted-foreground">
+                Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
+              </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Nuestro Equipo */}
+      <section className="w-full bg-[#EA2336] py-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4 text-black">
+            Nuestro Equipo
+          </h2>
+          <p className="text-center text-black mb-12 max-w-3xl mx-auto">
+            Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow p-6">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+                />
+                <div className="text-center">
+                  <h3 className="font-heading font-bold text-xl mb-2 text-black">{member.name}</h3>
+                  <p className="text-sm text-[#EA2336] font-semibold mb-3">{member.role}</p>
+                  <p className="text-sm text-black/80 leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
