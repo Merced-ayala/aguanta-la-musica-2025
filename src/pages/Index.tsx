@@ -33,14 +33,14 @@ const Index = () => {
 
             {/* Right Column - Heading and Description */}
             <div className="text-center md:text-left space-y-6">
-              <h1 className="font-heading font-bold text-4xl md:text-6xl leading-tight">
+              <h1 className="font-heading font-bold text-4xl md:text-6xl leading-tight" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
                 <span className="text-white block">Aquí descubrirás</span>
                 <span className="text-white block">qué es la</span>
                 <span className="block" style={{
                 color: '#E62C3A'
               }}>Musicoterapia</span>
               </h1>
-              <p className="text-lg md:text-xl text-white leading-relaxed">
+              <p className="text-lg md:text-xl text-white leading-relaxed" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.7)' }}>
                 Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial.
               </p>
             </div>
