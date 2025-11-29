@@ -44,15 +44,6 @@ const Services = () => {
               <p className="mb-2">La duración recomendada es de 2 horas y el aforo máximo por grupo es de 30 personas.</p>
               <p className="mb-4">Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.</p>
             </div>
-
-            <div className="w-full aspect-video mb-6">
-              <iframe
-                className="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/JwoAlxcIY9k"
-                title="Talleres de Musicoterapia"
-                allowFullScreen
-              ></iframe>
-            </div>
           </div>
         </section>
 
@@ -74,15 +65,6 @@ const Services = () => {
               <p className="mb-2">Espacio de encuentro 1 a 1 enfocado en ayudarte a desarrollar tus habilidades y fomentar tu crecimiento de forma personalizada.</p>
               <p className="mb-4">Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.</p>
               <p className="font-semibold">¡Agenda tu primera sesión con el 50% de descuento!</p>
-            </div>
-
-            <div className="w-full aspect-video mb-6">
-              <iframe
-                className="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/R6zgvR4pY-A"
-                title="Sesiones de Musicoterapia"
-                allowFullScreen
-              ></iframe>
             </div>
           </div>
         </section>
@@ -106,14 +88,54 @@ const Services = () => {
               <p className="mb-2"><strong>Duración mínima:</strong> un mes / 4 sesiones</p>
               <p className="mb-4"><strong>Cantidad máxima de integrantes:</strong> 30 personas</p>
             </div>
+          </div>
+        </section>
 
-            <div className="w-full aspect-video mb-6">
-              <iframe
-                className="w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/UG57hC_T5ZA"
-                title="Procesos Grupales de Musicoterapia"
-                allowFullScreen
-              ></iframe>
+        {/* Conoce más - Sección de Videos */}
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12">
+              Conoce <span className="text-primary">más</span>
+            </h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Video Talleres */}
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="w-full aspect-video mb-4">
+                  <iframe
+                    className="w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/JwoAlxcIY9k"
+                    title="Talleres de Musicoterapia"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h3 className="font-semibold text-lg text-center">Talleres</h3>
+              </div>
+
+              {/* Video Sesiones */}
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="w-full aspect-video mb-4">
+                  <iframe
+                    className="w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/R6zgvR4pY-A"
+                    title="Sesiones de Musicoterapia"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h3 className="font-semibold text-lg text-center">Sesiones individuales</h3>
+              </div>
+
+              {/* Video Procesos Grupales */}
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <div className="w-full aspect-video mb-4">
+                  <iframe
+                    className="w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/UG57hC_T5ZA"
+                    title="Procesos Grupales de Musicoterapia"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h3 className="font-semibold text-lg text-center">Procesos grupales</h3>
+              </div>
             </div>
           </div>
         </section>
