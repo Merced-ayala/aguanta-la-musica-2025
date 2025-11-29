@@ -61,9 +61,14 @@ const Services = () => {
                     <span>Modalidad: Presencial</span>
                   </div>
                 </div>
-                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
+                <a
+                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Talleres"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
+                >
                   Solicitar información
-                </button>
+                </a>
               </div>
             </div>
 
@@ -96,9 +101,14 @@ const Services = () => {
                     <span>Modalidad: Presencial ó virtual</span>
                   </div>
                 </div>
-                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
+                <a
+                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20las%20Sesiones%20Individuales"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
+                >
                   Solicitar información
-                </button>
+                </a>
               </div>
             </div>
 
@@ -140,9 +150,14 @@ const Services = () => {
                     <span>Cantidad máxima de integrantes: 30 personas</span>
                   </div>
                 </div>
-                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
+                <a
+                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales%20de%20Musicoterapia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
+                >
                   Solicitar información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -178,9 +193,14 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
               </p>
-                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
+                <a
+                  href="https://wa.me/573001234567?text=Hola,%20quiero%20conocer%20más%20sobre%20los%20Talleres"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
+                >
                   ¡Cuéntanos sobre tu equipo!
-                </button>
+                </a>
             </div>
           </div>
           <div className="w-full mt-8 lg:mt-0">
@@ -250,9 +270,14 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 <strong>Cantidad máxima de integrantes:</strong> 30 personas
               </p>
-              <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
+              <a
+                href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
+              >
                 ¡Conversemos!
-              </button>
+              </a>
             </div>
           </div>
           <div className="w-full mt-8 lg:mt-0">
