@@ -17,7 +17,7 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Hero Section */}
-      <section className="w-full bg-[#CA4F00] py-16">
+      <section className="w-full bg-[#C4AF00] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-black">
@@ -31,7 +31,7 @@ const Services = () => {
       </section>
 
       {/* Servicios Cards */}
-      <section className="w-full bg-[#CA4F00] py-16">
+      <section className="w-full bg-[#C4AF00] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-3">
             {/* Talleres */}
@@ -46,11 +46,6 @@ const Services = () => {
                 <p className="text-gray-700 mb-4">
                   Experiencias diseñadas a la medida de tus necesidades en áreas como yoga, relajación, liderazgo, gestión emocional, creatividad, manejo del estrés, trabajo en equipo.
                 </p>
-                <div className="mb-4 text-sm text-gray-700">
-                  <p className="mb-2">En estas experiencias, nuestros terapeutas adaptan las actividades a los objetivos que estés buscando alcanzar.</p>
-                  <p className="mb-2">La duración recomendada es de 2 horas y el aforo máximo por grupo es de 30 personas.</p>
-                  <p className="mb-2">Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.</p>
-                </div>
                 <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
                   Solicitar información
                 </button>
@@ -69,12 +64,6 @@ const Services = () => {
                 <p className="text-gray-700 mb-4">
                   Musicoterapia, canto y técnica vocal, percusión, y metales. Nuestros expertos te guiarán en tu proceso de crecimiento con la música.
                 </p>
-                <div className="mb-4 text-sm text-gray-700">
-                  <h4 className="font-semibold mb-2">Sesiones</h4>
-                  <p className="mb-2">Espacio de encuentro 1 a 1 enfocado en ayudarte a desarrollar tus habilidades y fomentar tu crecimiento de forma personalizada.</p>
-                  <p className="mb-2">Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.</p>
-                  <p className="font-semibold">¡Agenda tu primera sesión con el 50% de descuento!</p>
-                </div>
                 <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
                   Solicitar información
                 </button>
@@ -93,12 +82,6 @@ const Services = () => {
                 <p className="text-gray-700 mb-4">
                   Proceso continuo para grupos en los que la terapia busca incidir en cómo los participantes se relacionan con su entorno, sus valores comunes y posibilidades. Ideal para empresas y otra comunidades.
                 </p>
-                <div className="mb-4 text-sm text-gray-700">
-                  <h4 className="font-semibold mb-2">Procesos</h4>
-                  <p className="mb-2">Aquí es donde la Musicoterapia transforma tu entorno. En estos procesos los grupos tienen un espacio para fortalecerse, empoderarse y transformar su realidad de la mano de profesionales con amplia experiencia.</p>
-                  <p className="mb-2"><strong>Duración mínima:</strong> un mes / 4 sesiones</p>
-                  <p className="mb-2"><strong>Cantidad máxima de integrantes:</strong> 30 personas</p>
-                </div>
                 <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
                   Solicitar información
                 </button>
