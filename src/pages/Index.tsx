@@ -24,21 +24,26 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6 text-white leading-tight">
-              Aquí descubrirás qué es la musicoterapia
-            </h1>
-            <p className="text-lg md:text-xl text-white mb-8">
-              Explora cómo la música puede transformar tu bienestar y acompañarte en tus procesos personales.
-            </p>
-            <a
-              href="#"
-              className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black transition-all duration-300"
-            >
-              Agendar sesión
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
+              <img 
+                src="/images/logo-blanco.png" 
+                alt="Aguanta la Música Logo" 
+                className="w-full max-w-md"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6 leading-tight">
+                <span className="text-white">Aquí descubrirás<br />
+                qué es la</span><br />
+                <span className="text-primary">Musicoterapia</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white mb-8">
+                Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -76,13 +81,15 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-[#D7263D]">
+      <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
-              Nuestros Servicios
-            </h2>
-            <p className="text-lg text-white max-w-3xl mx-auto">
+            <div className="inline-block bg-[#EA2336] px-12 py-4 rounded-lg mb-4">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-white">
+                Nuestros Servicios
+              </h2>
+            </div>
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
@@ -112,7 +119,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link 
               to="/servicios" 
-              className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black transition-all duration-300"
+              className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black active:bg-[#C4AF00] active:text-black transition-all duration-300"
             >
               Ver todos los servicios
             </Link>
@@ -144,24 +151,18 @@ const Index = () => {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Link 
-                    to={`/blog/${articulo.slug}`}
-                    className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black transition-all duration-300 w-full text-center"
-                  >
-                    Leer más
-                  </Link>
+                  <Button asChild variant="ghost" className="w-full">
+                    <Link to={`/blog/${articulo.slug}`}>Leer más</Link>
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-8">
-            <Link 
-              to="/blog" 
-              className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black transition-all duration-300"
-            >
-              Ver todos los artículos
-            </Link>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/blog">Ver todos los artículos</Link>
+            </Button>
           </div>
         </div>
       </section>
