@@ -23,24 +23,38 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}>
+      <section className="relative min-h-[600px] md:min-h-[700px] px-4 bg-cover bg-center flex items-center" style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6 leading-tight text-white">
-              Aquí descubrirás qué es la musicoterapia
-            </h1>
-            <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-              Explora cómo la música puede transformar tu bienestar y acompañarte en tus procesos personales.
-            </p>
-            <a 
-              href="https://wa.me/573123456789" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-black hover:bg-[#C4AF00] hover:text-black active:bg-[#C4AF00] active:text-black transition-all duration-300"
-            >
-              Agendar sesión
-            </a>
+        <div className="container mx-auto relative z-10 py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Column - Logo and Text */}
+            <div className="flex flex-col items-center justify-center space-y-6">
+              <img 
+                src="/images/logo-blanco.png" 
+                alt="Aguanta la Música" 
+                className="w-full max-w-md"
+              />
+              <div className="text-center text-white space-y-1">
+                <p className="text-xl md:text-2xl font-semibold tracking-wide">
+                  AGUANTA LA MÚSICA
+                </p>
+                <p className="text-lg md:text-xl tracking-wide">
+                  VIVIMOS LA MÚSICA
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Heading and Description */}
+            <div className="text-center md:text-left space-y-6">
+              <h1 className="font-heading font-bold text-4xl md:text-6xl leading-tight">
+                <span className="text-white block">Aquí descubrirás</span>
+                <span className="text-white block">qué es la</span>
+                <span className="block" style={{ color: '#E62C3A' }}>Musicoterapia</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white leading-relaxed">
+                Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial.
+              </p>
+            </div>
           </div>
         </div>
       </section>
