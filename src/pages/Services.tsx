@@ -35,7 +35,7 @@ const Services = () => {
             {/* Talleres */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <img 
-                src="/images/servicios/sesiones.jpeg" 
+                src="/images/servicios/talleres.png" 
                 alt="Talleres - Aguanta la Música"
                 className="w-full h-64 object-cover"
               />
@@ -105,7 +105,7 @@ const Services = () => {
             {/* Procesos grupales */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg lg:col-span-2 lg:max-w-xl lg:mx-auto lg:w-full">
               <img 
-                src="/images/servicios/sesiones.jpeg" 
+                src="/images/servicios/sesiones-grupales.png" 
                 alt="Procesos Grupales - Aguanta la Música"
                 className="w-full h-64 object-cover"
               />
