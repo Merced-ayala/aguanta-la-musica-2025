@@ -8,60 +8,48 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const formSchema = z.object({
   nombre: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(100),
   email: z.string().email("Email inválido").max(255),
   asunto: z.string().min(3, "El asunto debe tener al menos 3 caracteres").max(200),
-  mensaje: z.string().min(10, "El mensaje debe tener al menos 10 caracteres").max(1000),
+  mensaje: z.string().min(10, "El mensaje debe tener al menos 10 caracteres").max(1000)
 });
-
 type FormValues = z.infer<typeof formSchema>;
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       nombre: "",
       email: "",
       asunto: "",
-      mensaje: "",
-    },
+      mensaje: ""
+    }
   });
-
   useEffect(() => {
     document.title = "Contáctanos - Aguanta la Música";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Ponte en contacto con nosotros. Agenda tu sesión de musicoterapia o solicita más información sobre nuestros servicios."
-      );
+      metaDescription.setAttribute("content", "Ponte en contacto con nosotros. Agenda tu sesión de musicoterapia o solicita más información sobre nuestros servicios.");
     }
   }, []);
-
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulación de envío
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+    await new Promise(resolve => setTimeout(resolve, 1500));
     console.log("Formulario enviado:", data);
-    
     toast({
       title: "¡Mensaje enviado!",
-      description: "Gracias por contactarnos. Te responderemos pronto.",
+      description: "Gracias por contactarnos. Te responderemos pronto."
     });
-    
     form.reset();
     setIsSubmitting(false);
   };
-
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4">
+  return <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h1 className="font-display font-bold text-4xl md:text-5xl mb-4">
@@ -94,12 +82,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">WhatsApp</h3>
-                  <a 
-                    href="https://wa.me/573142244057" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href="https://wa.me/573142244057" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                     +57 314 224 4057
                   </a>
                 </div>
@@ -107,7 +90,7 @@ const Contact = () => {
 
               <div className="flex items-start">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mr-4 flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-accent-foreground" />
+                  <MapPin className="w-5 h-5 text-accent-foreground bg-primary-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Ubicación</h3>
@@ -134,65 +117,45 @@ const Contact = () => {
             
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="nombre"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="nombre" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Nombre completo</FormLabel>
                       <FormControl>
                         <Input placeholder="Tu nombre" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="email" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input type="email" placeholder="tu@email.com" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
 
-                <FormField
-                  control={form.control}
-                  name="asunto"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="asunto" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Asunto</FormLabel>
                       <FormControl>
                         <Input placeholder="¿En qué podemos ayudarte?" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
 
-                <FormField
-                  control={form.control}
-                  name="mensaje"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="mensaje" render={({
+                field
+              }) => <FormItem>
                       <FormLabel>Mensaje</FormLabel>
                       <FormControl>
-                        <Textarea
-                          placeholder="Cuéntanos más sobre lo que necesitas..."
-                          className="min-h-[150px]"
-                          {...field}
-                        />
+                        <Textarea placeholder="Cuéntanos más sobre lo que necesitas..." className="min-h-[150px]" {...field} />
                       </FormControl>
                       <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? "Enviando..." : "Enviar mensaje"}
@@ -202,8 +165,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
