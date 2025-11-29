@@ -55,7 +55,7 @@ const Services = () => {
             {/* Sesiones individuales */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
               <img 
-                src="/images/servicios/sesiones-individuales.jpeg" 
+                src="/images/servicios/sesiones-originales.jpeg" 
                 alt="Sesiones Individuales - Aguanta la Música"
                 className="w-full h-48 object-cover"
               />
