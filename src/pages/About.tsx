@@ -62,10 +62,10 @@ const About = () => {
       {/* Hero: Acerca de Nosotros */}
       <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
             Acerca de <span className="text-white">Nosotros</span>
           </h1>
-          <p className="text-lg text-white max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-white max-w-3xl mx-auto mb-12" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.3)' }}>
             En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
 
@@ -122,11 +122,11 @@ const About = () => {
         {/* Contenido */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 flex items-center min-h-[70vh]">
           <div className="ml-auto w-full md:w-1/2 text-center md:text-right">
-            <p className="text-2xl md:text-3xl mb-2 font-light">¡Hola! Soy</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+            <p className="text-2xl md:text-3xl mb-2 font-light" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)' }}>¡Hola! Soy</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>
               David Caycedo Galvis
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed mb-8">
+            <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ textShadow: '2px 2px 6px rgba(0, 0, 0, 0.8)' }}>
               Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
             </p>
             <a
@@ -144,10 +144,10 @@ const About = () => {
       {/* Nuestro Equipo */}
       <section className="w-full bg-[#EA2336] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)' }}>
             Nuestro Equipo
           </h2>
-          <p className="text-white mb-12 max-w-3xl mx-auto">
+          <p className="text-white mb-12 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.4)' }}>
             Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
           </p>
 
