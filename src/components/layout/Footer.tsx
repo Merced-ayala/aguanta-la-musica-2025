@@ -38,7 +38,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Síguenos</h4>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/in/merced-ayala"
+                href="https://www.linkedin.com/company/aguantalamusica/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-primary transition-colors"
@@ -46,7 +46,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aguantalamusica/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-primary transition-colors"
