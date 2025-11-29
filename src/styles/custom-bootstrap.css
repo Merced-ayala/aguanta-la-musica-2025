@@ -8,6 +8,15 @@
   --white-color: #ffffff;
 }
 
+/* Configuración global de fuentes */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* Bootstrap overrides con colores de la marca */
 .bg-primary {
   background-color: var(--primary-color) !important;
