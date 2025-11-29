@@ -96,3 +96,75 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Estilos personalizados para artículos del blog */
+
+/* Contenedor general del artículo */
+article {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Título principal */
+article h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* Secciones principales */
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 700;   /* Negrita */
+  color: #000000;     /* Negro */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulos */
+article h3 {
+  font-size: 1.25rem;
+  font-weight: 700;    /* Negrita */
+  color: #000000;      /* Negro */
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Párrafos */
+article p {
+  color: #444444;   /* Gris oscuro */
+  margin-bottom: 1.2rem;  /* Espaciado entre párrafos */
+}
+
+/* Listas con viñetas */
+article ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+article ul li {
+  color: #444444;
+  margin-bottom: 0.6rem;
+}
+
+/* Listas numeradas */
+article ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+article ol li {
+  color: #444444;
+  margin-bottom: 0.6rem;
+}
+
+/* Imágenes dentro del artículo */
+article img {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
