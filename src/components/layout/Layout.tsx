@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import Navbar from "./Navbar";
+import CustomNavbar from "./Navbar";
 import Footer from "./Footer";
+import { HelmetProvider } from "react-helmet-async";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,11 +9,15 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div className="d-flex flex-column min-vh-100">
+        <CustomNavbar />
+        <main className="flex-grow-1" style={{ paddingTop: "80px" }}>
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 };
 

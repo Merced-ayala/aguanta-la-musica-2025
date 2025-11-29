@@ -1,66 +1,72 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram } from "lucide-react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t border-border">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-display font-bold text-lg mb-4">Aguanta la Música</h3>
-            <p className="text-sm text-muted-foreground">
-              Creamos experiencias musicales significativas para personas, entidades y empresas.
+    <footer className="footer-custom py-5">
+      <Container>
+        <Row className="g-4">
+          <Col md={4}>
+            <h5 className="mb-3">Aguanta la Música</h5>
+            <p>
+              Utilizamos la música como herramienta para fomentar el crecimiento de individuos y comunidades.
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Enlaces</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+          </Col>
+          
+          <Col md={4}>
+            <h5 className="mb-3">Enlaces</h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <Link to="/" className="text-white text-decoration-none">
                   Inicio
                 </Link>
               </li>
-              <li>
-                <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">
+              <li className="mb-2">
+                <Link to="/servicios" className="text-white text-decoration-none">
                   Servicios
                 </Link>
               </li>
-              <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+              <li className="mb-2">
+                <Link to="/blog" className="text-white text-decoration-none">
                   Blog
                 </Link>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Síguenos</h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.linkedin.com/in/merced-ayala"
-                target="_blank"
+          </Col>
+          
+          <Col md={4}>
+            <h5 className="mb-3">Síguenos</h5>
+            <div className="d-flex gap-3">
+              <a 
+                href="https://www.linkedin.com" 
+                target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white fs-4"
               >
-                <Linkedin className="h-5 w-5" />
+                LinkedIn
               </a>
-              <a
-                href="#"
-                target="_blank"
+              <a 
+                href="https://www.instagram.com" 
+                target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-white fs-4"
               >
-                <Instagram className="h-5 w-5" />
+                Instagram
               </a>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2025 Aguanta la Música. Todos los derechos reservados.</p>
-        </div>
-      </div>
+          </Col>
+        </Row>
+        
+        <hr className="my-4 bg-white" />
+        
+        <Row>
+          <Col className="text-center">
+            <p className="mb-0">
+              &copy; {new Date().getFullYear()} Aguanta la Música. Todos los derechos reservados.
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };
