@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     <HelmetProvider>
       <div className="d-flex flex-column min-vh-100">
         <CustomNavbar />
-        <main className="flex-grow-1" style={{ paddingTop: "80px" }}>
+        <main className="flex-grow-1" style={{ paddingTop: "90px" }}>
           {children}
         </main>
         <Footer />

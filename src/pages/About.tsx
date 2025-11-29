@@ -63,16 +63,16 @@ const About = () => {
       </Helmet>
 
       {/* Intro Section */}
-      <section className="py-5 bg-light-custom">
+      <section className="section-padding bg-gradient-light">
         <Container>
           <Row className="align-items-center">
-            <Col md={6} className="text-center text-md-start">
-              <p className="text-muted mb-2">¡Hola! Soy</p>
-              <h1 className="letras display-4 mb-4">David Caycedo Galvis</h1>
-              <p className="fs-5 mb-4">
+            <Col md={8} lg={6} className="mx-auto text-center">
+              <p className="text-muted-custom mb-2 text-uppercase fw-semibold" style={{ letterSpacing: '0.1em' }}>¡Hola! Soy</p>
+              <h1 className="letras display-3 mb-4">David Caycedo Galvis</h1>
+              <p className="lead mb-4">
                 Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
               </p>
-              <Button variant="dark" size="lg">
+              <Button variant="dark" size="lg" className="shadow-custom">
                 ¡Sígueme en LinkedIn!
               </Button>
             </Col>
@@ -81,14 +81,14 @@ const About = () => {
       </section>
 
       {/* Misión Section */}
-      <section className="py-5">
+      <section className="section-padding">
         <Container>
-          <Row>
-            <Col md={4}>
-              <h2 className="letras display-5">Misión</h2>
+          <Row className="align-items-center">
+            <Col md={4} className="mb-4 mb-md-0">
+              <h2 className="letras display-4 text-primary">Misión</h2>
             </Col>
             <Col md={8}>
-              <p className="fs-5">
+              <p className="fs-5 text-gray-600 mb-0">
                 Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
               </p>
             </Col>
@@ -97,43 +97,45 @@ const About = () => {
       </section>
 
       {/* Visión Section */}
-      <section className="py-5 bg-light-custom">
+      <section className="section-padding bg-gray-50">
         <Container>
-          <Row>
-            <Col md={8}>
-              <p className="fs-5">
+          <Row className="align-items-center">
+            <Col md={8} className="mb-4 mb-md-0">
+              <p className="fs-5 text-gray-600 mb-0">
                 Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
               </p>
             </Col>
             <Col md={4} className="text-md-end">
-              <h2 className="letras display-5">Visión</h2>
+              <h2 className="letras display-4 text-primary">Visión</h2>
             </Col>
           </Row>
         </Container>
       </section>
 
       {/* Team Section */}
-      <section className="py-5">
+      <section className="section-padding-lg">
         <Container>
-          <h2 className="letras text-center display-5 mb-3">
-            Nuestro <span className="text-primary">Equipo</span>
-          </h2>
-          <p className="text-center text-muted mb-5">
-            Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
-          </p>
+          <div className="text-center mb-5">
+            <h2 className="letras display-4 mb-3">
+              Nuestro <span className="text-primary">Equipo</span>
+            </h2>
+            <p className="lead text-muted-custom mx-auto" style={{ maxWidth: '700px' }}>
+              Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
+            </p>
+          </div>
 
-          <Row className="g-4">
+          <Row className="g-5">
             {teamMembers.map((member, index) => (
               <Col key={index} md={6} lg={4}>
                 <div className="team-member">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="img-fluid rounded shadow mb-3"
+                    className="img-fluid rounded-lg-custom shadow-custom"
                   />
                   <h3 className="letras h4 mb-2">{member.name}</h3>
-                  {member.role && <p className="text-primary fw-bold mb-2">{member.role}</p>}
-                  <p className="text-muted">{member.bio}</p>
+                  {member.role && <p className="text-primary fw-semibold mb-2">{member.role}</p>}
+                  <p className="text-muted-custom">{member.bio}</p>
                 </div>
               </Col>
             ))}
