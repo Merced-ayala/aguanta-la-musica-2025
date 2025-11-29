@@ -59,39 +59,23 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-20">
-      {/* Sección David Caycedo */}
-      <section className="w-full bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="bg-gradient-to-br from-[#EA2336]/5 to-[#FFAC03]/5 p-8 md:p-12 rounded-lg max-w-4xl mx-auto">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              ¡Hola! Soy <span className="text-[#EA2336]">David Caycedo Galvis</span>
-            </h1>
-            <p className="text-xl text-gray-700 mb-6">
-              Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
-            </p>
-            <a
-              href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-[#FFAC03] text-black font-semibold hover:bg-[#EA2336] hover:text-white transition"
-            >
-              ¡Sígueme en LinkedIn!
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Acerca de Nosotros - Misión, Visión y Valores */}
+      {/* Hero: Acerca de Nosotros */}
       <section className="w-full bg-white py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Acerca de <span className="text-[#EA2336]">Nosotros</span>
           </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
+        </div>
+      </section>
 
+      {/* Sección Misión - Visión - Valores */}
+      <section className="w-full bg-white py-12">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
           <div className="grid gap-8 md:grid-cols-3">
+            {/* Nuestra Misión */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,6 +88,7 @@ const About = () => {
               </p>
             </div>
 
+            {/* Nuestra Visión */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#FFAC03] flex items-center justify-center mb-4">
                 <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,10 +97,11 @@ const About = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Nuestra Visión</h3>
               <p className="text-gray-700">
-                Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamérica y el mundo.
+                Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
               </p>
             </div>
 
+            {/* Nuestros Valores */}
             <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,10 +117,45 @@ const About = () => {
         </div>
       </section>
 
+      {/* Sección "Hola, soy David Caycedo" */}
+      <section className="w-full bg-white py-16">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          <div className="bg-gradient-to-br from-[#EA2336]/5 to-[#FFAC03]/5 p-8 md:p-12 rounded-2xl">
+            <div className="grid gap-8 md:grid-cols-2 items-center">
+              {/* Foto */}
+              <div className="flex justify-center">
+                <img
+                  src="/images/team/david-caycedo.jpg"
+                  alt="David Caycedo"
+                  className="rounded-2xl object-cover w-full max-w-sm shadow-lg"
+                />
+              </div>
+              {/* Texto */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  ¡Hola! Soy <span className="text-[#EA2336]">David Caycedo Galvis</span>
+                </h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-[#FFAC03] text-black font-semibold hover:bg-[#EA2336] hover:text-white transition"
+                >
+                  ¡Sígueme en LinkedIn!
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Nuestro Equipo */}
       <section className="w-full bg-white py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             Nuestro Equipo
           </h2>
           <p className="text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -143,7 +164,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-black hover:shadow-2xl transition-shadow">
+              <div key={index} className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -151,7 +172,7 @@ const About = () => {
                 />
                 <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
                 <p className="text-sm font-medium text-[#EA2336] mb-3">{member.role}</p>
-                <p className="text-sm leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   {member.description}
                 </p>
               </div>
