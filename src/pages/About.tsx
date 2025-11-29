@@ -88,42 +88,41 @@ const About = () => {
             Acerca de <span className="text-[#EA2336]">Nosotros</span>
           </h1>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-            En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica que fomenta el crecimiento de individuos y comunidades.
+            En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#EA2336] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                 </svg>
               </div>
-              <h2 className="font-heading font-bold text-2xl mb-4">Nuestra Misión</h2>
+              <h3 className="text-xl font-semibold mb-3">Nuestra Misión</h3>
               <p className="text-gray-700">
                 Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
               </p>
             </div>
 
-            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#FFAC03] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-[#FFAC03] flex items-center justify-center mb-4">
+                <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="font-heading font-bold text-2xl mb-4">Nuestra Visión</h2>
+              <h3 className="text-xl font-semibold mb-3">Nuestra Visión</h3>
               <p className="text-gray-700">
                 Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamérica y el mundo.
               </p>
             </div>
 
-            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#EA2336] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-[#EA2336] flex items-center justify-center mb-4">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h2 className="font-heading font-bold text-2xl mb-4">Nuestros Valores</h2>
+              <h3 className="text-xl font-semibold mb-3">Nuestros Valores</h3>
               <p className="text-gray-700">
                 Compromiso con la excelencia, respeto por la diversidad, innovación constante y dedicación al bienestar de quienes confían en nosotros.
               </p>
