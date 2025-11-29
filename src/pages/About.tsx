@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Music2, Target, Heart } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -13,84 +12,119 @@ const About = () => {
     }
   }, []);
 
+  const teamMembers = [
+    {
+      name: "David Leonardo Caycedo",
+      role: "Fundador y CEO",
+      image: "/images/team/david-caycedo.jpg",
+      description: "Líder del equipo con una visión estratégica. Magíster en Musicoterapia de la Universidad Nacional de Colombia, CEO y Fundador de Aguanta la Música, y terapeuta Gestalt. Con experiencia atendiendo jóvenes y adultos, enfocados en potencializar su propósito y encontrar más bienestar en su vida."
+    },
+    {
+      name: "Ana María Rodríguez",
+      role: "Musicoterapeuta",
+      image: "/images/team/ana-maria-rodriguez.jpeg",
+      description: "Magíster en Musicoterapia y Psicóloga de la Universidad Nacional de Colombia, con formación complementaria en Terapia Gestalt, y terapias psicocorporales. Tiene experiencia en atención individual y grupal con madres adolescentes, jóvenes en conflicto con la ley, pacientes en unidades de cuidados intensivos, y terapia particular individual y grupal."
+    },
+    {
+      name: "Camilo Roa",
+      role: "Musicoterapeuta",
+      image: "/images/team/camilo-roa.jpeg",
+      description: "Trabajador Social y Magíster en Musicoterapia de la Universidad Nacional de Colombia, con experiencia en acompañamiento individual y grupal a personas víctimas del conflicto armado, mujeres, comunidad LGBTI, niños, adolescentes y adultos. Ha trabajado con personas que enfrentan condiciones médicas como fibromialgia, depresión y ansiedad, así como con quienes buscan su desarrollo personal."
+    },
+    {
+      name: "Yenifer Ángel",
+      role: "Musicoterapeuta",
+      image: "/images/team/yenifer-angel.jpeg",
+      description: "Magíster en Musicoterapia de la Universidad Nacional de Colombia. Pianista, compositora, instructora de yoga y técnica vocal. Crea espacios de crecimiento y bienestar para todas las edades a través de la expresión corporal, la exploración sonora y el desarrollo del potencial creativo."
+    },
+    {
+      name: "Merced Ayala",
+      role: "Desarrollo Web y Multimedia",
+      image: "/images/team/merced-ayala.jpeg",
+      description: "Músico e Ingeniera en Multimedia con formación en Desarrollo Web Full Stack por el Ministerio TIC 2024. Ha participado en el Space Apps Challenge de la NASA, donde combinó sus conocimientos en tecnología y creatividad para desarrollar soluciones innovadoras. Su experiencia abarca diseño de interfaces, animación 2D y desarrollo de proyectos interactivos, con un enfoque en la educación."
+    },
+    {
+      name: "Juan Venegas",
+      role: "Actor y Cantante",
+      image: "/images/team/juan-venegas.jpg",
+      description: "Actor y cantante profesional. Ha trabajado en numerosos proyectos artísticos audiovisuales, musicales, teatrales y operísticos. Se destaca por un fuerte interés en los procesos pedagógicos artísticos contemporáneos y las motivaciones qué nos llevan como sociedad a hacer arte."
+    },
+    {
+      name: "Andrés Mejía - PianÓpera",
+      role: "Barítono y Maestro",
+      image: "/images/team/andres-mejia.jpeg",
+      description: "Barítono integrante del Coro Nacional de Colombia, y solista en Zarzuela Colombia y La Ópera de Colombia, fundador de PianÓpera y Maestro en Interpretación Musical del Conservatorio del Liceu de Barcelona, con amplia experiencia en la gestión de proyectos y producciones musicales."
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-24 pb-20 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <h1 className="font-display font-bold text-4xl md:text-5xl mb-8 text-center">
-          Acerca de <span className="text-primary">Nosotros</span>
-        </h1>
+      <div className="container mx-auto max-w-6xl">
+        {/* Sección David Caycedo */}
+        <section className="mb-16 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 rounded-lg">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+              ¡Hola! Soy <span className="text-primary">David Caycedo Galvis</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-6">
+              Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
+            </p>
+            <a
+              href="LINKEDIN_DAVID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
+            >
+              ¡Sígueme en LinkedIn!
+            </a>
+          </div>
+        </section>
 
-        <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-muted-foreground mb-8 text-center">
-            En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
+        {/* Misión y Visión */}
+        <section className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+          <div className="bg-muted p-8 rounded-lg">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Misión</h2>
+            <p className="text-muted-foreground">
+              Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
+            </p>
+          </div>
+
+          <div className="bg-muted p-8 rounded-lg">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Visión</h2>
+            <p className="text-muted-foreground">
+              Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
+            </p>
+          </div>
+        </section>
+
+        {/* Nuestro Equipo */}
+        <section className="mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4">
+            Nuestro <span className="text-primary">Equipo</span>
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-            <div className="text-center p-6 bg-muted rounded-lg">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Music2 className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-muted rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="font-heading font-bold text-xl mb-2">{member.name}</h3>
+                  <p className="text-sm text-primary font-semibold mb-3">{member.role}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Nuestra Misión</h3>
-              <p className="text-muted-foreground">
-                Acompañar procesos de bienestar integral a través de experiencias musicales significativas y transformadoras.
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-muted rounded-lg">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-4">
-                <Target className="w-8 h-8 text-secondary" />
-              </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Nuestra Visión</h3>
-              <p className="text-muted-foreground">
-                Ser referentes en musicoterapia, promoviendo el bienestar emocional y el crecimiento personal a través de la música.
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-muted rounded-lg">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-                <Heart className="w-8 h-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Nuestros Valores</h3>
-              <p className="text-muted-foreground">
-                Empatía, profesionalismo, creatividad y compromiso con el bienestar de cada persona que acompañamos.
-              </p>
-            </div>
+            ))}
           </div>
-
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-lg my-12">
-            <h2 className="font-display font-bold text-2xl md:text-3xl mb-4">¿Qué es la Musicoterapia?</h2>
-            <p className="mb-4">
-              La musicoterapia es el uso profesional de la música y sus elementos como intervención en ambientes médicos, educativos y cotidianos con individuos, grupos, familias o comunidades, buscando optimizar su calidad de vida y mejorar su salud física, social, comunicativa, emocional, intelectual y espiritual.
-            </p>
-            <p className="mb-4">
-              A través de la creación musical, la escucha, el movimiento y otras experiencias musicales, la musicoterapia facilita procesos de autoconocimiento, expresión emocional y transformación personal.
-            </p>
-          </div>
-
-          <div className="my-12">
-            <h2 className="font-display font-bold text-2xl md:text-3xl mb-4">Nuestro Enfoque Terapéutico</h2>
-            <p className="mb-4">
-              En Aguanta la Música trabajamos desde un enfoque humanista e integrativo, combinando principios de la Terapia Gestalt con las técnicas propias de la musicoterapia. Esto significa que:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>Partimos del aquí y ahora, de lo que está presente en cada sesión</li>
-              <li>Respetamos tu proceso único y tus tiempos</li>
-              <li>Fomentamos la conciencia y la responsabilidad personal</li>
-              <li>Usamos la música como lenguaje de expresión y exploración</li>
-              <li>Creamos un espacio seguro y libre de juicios</li>
-            </ul>
-          </div>
-
-          <div className="bg-muted p-8 rounded-lg my-12">
-            <h2 className="font-display font-bold text-2xl md:text-3xl mb-4">¿Para quién es la Musicoterapia?</h2>
-            <p className="mb-4">
-              La musicoterapia es para todas las personas que deseen explorar nuevas formas de expresión, gestionar sus emociones y mejorar su bienestar. No se requieren conocimientos musicales previos.
-            </p>
-            <p>
-              Trabajamos con adultos en procesos personales, con empresas que buscan mejorar el bienestar de sus equipos, y con instituciones educativas que quieren promover el desarrollo socioemocional de sus estudiantes.
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );
