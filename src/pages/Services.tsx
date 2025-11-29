@@ -140,95 +140,113 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Conoce más - Secciones Detalladas */}
-      <section className="w-full bg-white py-8">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12">
-            Conoce más
-          </h2>
-        </div>
-      </section>
-
       {/* Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 md:grid-cols-2 items-center">
-          <div className="text-black">
-            <h2 className="font-heading font-bold text-4xl mb-6">Talleres</h2>
-            <p className="text-lg mb-4">
-              En estas experiencias, nuestros terapeutas adaptan las actividades a los objetivos que estés buscando alcanzar.
-            </p>
-            <p className="text-lg mb-4">
-              La duración recomendada es de 2 horas y el aforo máximo por grupo es de 30 personas.
-            </p>
-            <p className="text-lg mb-6">
-              Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
-            </p>
-            <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
-              ¡Cuéntanos sobre tu equipo!
-            </button>
+        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
+          <div className="w-full">
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+              <h1 className="text-3xl font-extrabold mb-4 text-black">
+                Conoce más
+              </h1>
+              <h2 className="text-2xl font-semibold mb-4 text-black">
+                Talleres
+              </h2>
+              <p className="text-lg text-gray-800 mb-4">
+                En estas experiencias, nuestros terapeutas adaptan las actividades a los objetivos que estés buscando alcanzar.
+              </p>
+              <p className="text-lg text-gray-800 mb-4">
+                La duración recomendada es de 2 horas y el aforo máximo por grupo es de 30 personas.
+              </p>
+              <p className="text-lg text-gray-800 mb-6">
+                Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
+              </p>
+              <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+                ¡Cuéntanos sobre tu equipo!
+              </button>
+            </div>
           </div>
-          <div className="w-full aspect-video">
-            <iframe
-              className="w-full h-full rounded-xl shadow-lg"
-              src="https://www.youtube.com/embed/JwoAlxcIY9k"
-              title="Talleres de Musicoterapia"
-              allowFullScreen
-            ></iframe>
+          <div className="w-full mt-8 lg:mt-0">
+            <div className="aspect-video">
+              <iframe
+                className="w-full h-full rounded-xl shadow-lg"
+                src="https://www.youtube.com/embed/JwoAlxcIY9k"
+                title="Talleres de Musicoterapia"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Sesiones - Detalle */}
       <section className="w-full bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 md:grid-cols-2 items-center">
-          <div className="w-full aspect-video order-2 md:order-1">
-            <iframe
-              className="w-full h-full rounded-xl shadow-lg"
-              src="https://www.youtube.com/embed/R6zgvR4pY-A"
-              title="Sesiones de Musicoterapia"
-              allowFullScreen
-            ></iframe>
+        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
+          <div className="w-full mt-8 lg:mt-0 order-2 lg:order-1">
+            <div className="aspect-video">
+              <iframe
+                className="w-full h-full rounded-xl shadow-lg"
+                src="https://www.youtube.com/embed/R6zgvR4pY-A"
+                title="Sesiones de Musicoterapia"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-          <div className="text-gray-700 order-1 md:order-2">
-            <h2 className="font-heading font-bold text-4xl mb-6 text-black">Sesiones</h2>
-            <p className="text-lg mb-4">
-              Espacio de encuentro 1 a 1 enfocado en ayudarte a desarrollar tus habilidades y fomentar tu crecimiento de forma personalizada.
-            </p>
-            <p className="text-lg mb-4">
-              Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.
-            </p>
-            <p className="text-lg font-semibold text-[#EA2336] mb-6">
-              ¡Agenda tu primera sesión con el 50% de descuento!
-            </p>
+          <div className="w-full order-1 lg:order-2">
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+              <h1 className="text-3xl font-extrabold mb-4 text-black">
+                Conoce más
+              </h1>
+              <h2 className="text-2xl font-semibold mb-4 text-black">
+                Sesiones
+              </h2>
+              <p className="text-lg text-gray-800 mb-4">
+                Espacio de encuentro 1 a 1 enfocado en ayudarte a desarrollar tus habilidades y fomentar tu crecimiento de forma personalizada.
+              </p>
+              <p className="text-lg text-gray-800 mb-4">
+                Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.
+              </p>
+              <p className="text-lg font-semibold text-[#EA2336] mb-6">
+                ¡Agenda tu primera sesión con el 50% de descuento!
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Procesos - Detalle */}
       <section className="w-full bg-[#EA2336] py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 md:grid-cols-2 items-center">
-          <div className="text-white">
-            <h2 className="font-heading font-bold text-4xl mb-6">Procesos</h2>
-            <p className="text-lg mb-4">
-              Aquí es donde la Musicoterapia transforma tu entorno. En estos procesos los grupos tienen un espacio para fortalecerse, empoderarse y transformar su realidad de la mano de profesionales con amplia experiencia.
-            </p>
-            <p className="text-lg mb-2">
-              <strong>Duración mínima:</strong> un mes / 4 sesiones
-            </p>
-            <p className="text-lg mb-6">
-              <strong>Cantidad máxima de integrantes:</strong> 30 personas
-            </p>
-            <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
-              ¡Conversemos!
-            </button>
+        <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
+          <div className="w-full">
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+              <h1 className="text-3xl font-extrabold mb-4 text-black">
+                Conoce más
+              </h1>
+              <h2 className="text-2xl font-semibold mb-4 text-black">
+                Procesos
+              </h2>
+              <p className="text-lg text-gray-800 mb-4">
+                Aquí es donde la Musicoterapia transforma tu entorno. En estos procesos los grupos tienen un espacio para fortalecerse, empoderarse y transformar su realidad de la mano de profesionales con amplia experiencia.
+              </p>
+              <p className="text-lg text-gray-800 mb-2">
+                <strong>Duración mínima:</strong> un mes / 4 sesiones
+              </p>
+              <p className="text-lg text-gray-800 mb-6">
+                <strong>Cantidad máxima de integrantes:</strong> 30 personas
+              </p>
+              <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+                ¡Conversemos!
+              </button>
+            </div>
           </div>
-          <div className="w-full aspect-video">
-            <iframe
-              className="w-full h-full rounded-xl shadow-lg"
-              src="https://www.youtube.com/embed/UG57hC_T5ZA"
-              title="Procesos Grupales de Musicoterapia"
-              allowFullScreen
-            ></iframe>
+          <div className="w-full mt-8 lg:mt-0">
+            <div className="aspect-video">
+              <iframe
+                className="w-full h-full rounded-xl shadow-lg"
+                src="https://www.youtube.com/embed/UG57hC_T5ZA"
+                title="Procesos Grupales de Musicoterapia"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
