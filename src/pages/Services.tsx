@@ -17,13 +17,13 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Hero Section */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-[#CA4F00] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              Nuestros <span className="text-[#EA2336]">Servicios</span>
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-black">
+              Nuestros Servicios
             </h1>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg text-black max-w-3xl mx-auto">
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
@@ -31,7 +31,7 @@ const Services = () => {
       </section>
 
       {/* Servicios Cards */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-[#CA4F00] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-3">
             {/* Talleres */}
