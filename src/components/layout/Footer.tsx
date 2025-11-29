@@ -1,78 +1,66 @@
 import { Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="footer-custom">
-      <Container>
-        <Row className="g-4 g-lg-5">
-          <Col md={4}>
-            <h5 className="mb-4">Aguanta la Música</h5>
-            <p className="mb-0" style={{ opacity: 0.9 }}>
-              Utilizamos la música como herramienta para fomentar el crecimiento de individuos y comunidades.
+    <footer className="bg-muted border-t border-border">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="font-display font-bold text-lg mb-4">Aguanta la Música</h3>
+            <p className="text-sm text-muted-foreground">
+              Creamos experiencias musicales significativas para personas, entidades y empresas.
             </p>
-          </Col>
-          
-          <Col md={4}>
-            <h5 className="mb-4">Enlaces</h5>
-            <ul className="list-unstyled">
-              <li className="mb-3">
-                <Link to="/" className="d-inline-block">
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Enlaces</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Inicio
                 </Link>
               </li>
-              <li className="mb-3">
-                <Link to="/servicios" className="d-inline-block">
+              <li>
+                <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">
                   Servicios
                 </Link>
               </li>
-              <li className="mb-3">
-                <Link to="/blog" className="d-inline-block">
+              <li>
+                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
             </ul>
-          </Col>
-          
-          <Col md={4}>
-            <h5 className="mb-4">Síguenos</h5>
-            <div className="d-flex gap-4">
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank" 
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Síguenos</h4>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.linkedin.com/in/merced-ayala"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="d-inline-block"
-                style={{ fontSize: '1.5rem', transition: 'transform 0.3s ease' }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
-                LinkedIn
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a 
-                href="https://www.instagram.com" 
-                target="_blank" 
+              <a
+                href="#"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="d-inline-block"
-                style={{ fontSize: '1.5rem', transition: 'transform 0.3s ease' }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
-                Instagram
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
-          </Col>
-        </Row>
-        
-        <hr className="my-5" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }} />
-        
-        <Row>
-          <Col className="text-center">
-            <p className="mb-0" style={{ opacity: 0.8 }}>
-              &copy; {new Date().getFullYear()} Aguanta la Música. Todos los derechos reservados.
-            </p>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+          <p>© 2025 Aguanta la Música. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
   );
 };

@@ -1,164 +1,166 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { getArticulosRecientes } from "@/services/articulosService";
 import { getServicios } from "@/services/serviciosService";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "Aguanta la Música - Musicoterapia en Bogotá";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial."
+      );
+    }
+  }, []);
+
   const articulosRecientes = getArticulosRecientes(3);
   const servicios = getServicios();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <>
-      <Helmet>
-        <title>Aguanta la Música - Musicoterapia y Bienestar</title>
-        <meta 
-          name="description" 
-          content="Descubre el poder de la musicoterapia. Creamos experiencias musicales significativas para personas, entidades y empresas." 
-        />
-      </Helmet>
-
-      {/* Hero Section 1 */}
-      <section className="fondo1 d-flex align-items-center">
-        <Container>
-          <Row className="align-items-center" style={{ minHeight: '100vh', padding: '4rem 0' }}>
-            <Col md={6} className="d-flex justify-content-center align-items-center mb-5 mb-md-0">
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-background via-muted/30 to-background pt-32 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="flex justify-center">
               <img 
                 src="/images/logo-blanco.png" 
-                alt="Logo Aguanta la Música" 
-                className="img-fluid fade-in-up" 
-                style={{ maxWidth: "450px" }}
+                alt="Aguanta la Música Logo" 
+                className="w-full max-w-md"
               />
-            </Col>
-            <Col md={6} className="text-center text-md-start">
-              <h1 className="letras mb-4 fade-in-up" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>
+            </div>
+            <div className="text-center md:text-left">
+              <h1 className="font-heading font-bold text-4xl md:text-6xl mb-6 text-foreground leading-tight">
                 Aquí descubrirás<br />
                 qué es la<br />
-                <span className="highlight">Musicoterapia</span>
+                <span className="text-primary">Musicoterapia</span>
               </h1>
-              <p className="lead mb-0">
+              <p className="text-lg md:text-xl text-foreground mb-8">
                 Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial.
               </p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Hero Section 2 - Video */}
-      <section className="fondo2 d-flex align-items-center">
-        <Container>
-          <Row className="align-items-center" style={{ minHeight: '100vh', padding: '4rem 0' }}>
-            <Col md={6} className="text-center text-md-start mb-5 mb-md-0">
-              <h2 className="letras mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.2' }}>
+      {/* Video and Mission Section */}
+      <section className="py-20 px-4 bg-muted/50">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6 leading-tight">
                 Usar la música<br />
                 como terapia<br />
-                <span className="highlight">cambiará tu vida</span>
+                <span className="text-primary">cambiará tu vida</span>
               </h2>
-              <p className="lead text-gray-600">
+              <p className="text-lg text-foreground">
                 Creamos experiencias musicales significativas para personas, entidades y empresas.
               </p>
-            </Col>
-            <Col md={6}>
-              <div className="video-wrapper">
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full max-w-xl aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
+                  width="100%"
+                  height="100%"
                   src="https://www.youtube.com/embed/2Yc3eJru998"
-                  title="Terapia por David Caycedo Galvis"
+                  title="Musicoterapia - Aguanta la Música"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  className="w-full h-full"
                 ></iframe>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Servicios Section */}
-      <section className="section-padding-lg bg-gray-50">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="letras display-4 mb-3">
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
               Nuestros <span className="text-primary">Servicios</span>
             </h2>
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
+              Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
+            </p>
           </div>
-          <Row className="g-4 g-lg-5">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {servicios.map((servicio) => (
-              <Col key={servicio.id} md={6} lg={4}>
-                <Card className="service-card">
-                  <Card.Img 
-                    variant="top" 
-                    src={servicio.imagen} 
+              <Card key={servicio.id} className="hover:shadow-lg transition-shadow">
+                <div className="aspect-video w-full overflow-hidden rounded-t-lg">
+                  <img
+                    src={servicio.imagen}
                     alt={servicio.titulo}
+                    className="w-full h-full object-cover"
                   />
-                  <Card.Body className="d-flex flex-column">
-                    <Card.Title className="letras h3 mb-3">{servicio.titulo}</Card.Title>
-                    <Card.Text className="flex-grow-1 text-gray-600">
-                      {servicio.descripcion}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-heading font-bold">{servicio.titulo}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-foreground">
+                    {servicio.descripcion}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
-          </Row>
-          <div className="text-center mt-5">
-            <Link to="/servicios">
-              <Button variant="primary" size="lg" className="px-5">
-                Ver todos los servicios
-              </Button>
-            </Link>
           </div>
-        </Container>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="font-semibold">
+              <Link to="/servicios">Ver todos los servicios</Link>
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* Blog Section */}
-      <section className="section-padding-lg">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="letras display-4 mb-3">
-              Artículos <span className="text-primary">Recientes</span>
-            </h2>
+      <section className="py-20 px-4 bg-muted/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Blog</h2>
           </div>
-          <Row className="g-4 g-lg-5">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {articulosRecientes.map((articulo) => (
-              <Col key={articulo.id} md={6} lg={4}>
-                <Card className="blog-card">
-                  <Card.Img 
-                    variant="top" 
-                    src={articulo.imagen} 
-                    alt={articulo.titulo}
-                  />
-                  <Card.Body className="d-flex flex-column">
-                    <span className="badge bg-primary mb-3 align-self-start">
-                      {articulo.categoria}
-                    </span>
-                    <Card.Title className="letras h5 mb-3">{articulo.titulo}</Card.Title>
-                    <Card.Text className="flex-grow-1 text-gray-600">
-                      {articulo.extracto}
-                    </Card.Text>
-                    <Link to={`/blog/${articulo.slug}`} className="mt-3">
-                      <Button variant="outline-primary" className="w-100">
-                        Leer más
-                      </Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </Col>
+              <Card key={articulo.id} className="hover:shadow-lg transition-shadow overflow-hidden">
+                <img
+                  src={articulo.imagen}
+                  alt={articulo.titulo}
+                  className="w-full h-48 object-cover"
+                />
+                <CardHeader>
+                  <CardTitle className="text-xl font-heading font-bold">{articulo.titulo}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground line-clamp-3">
+                    {articulo.extracto}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="ghost" className="w-full">
+                    <Link to={`/blog/${articulo.slug}`}>Leer más</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
             ))}
-          </Row>
-          <div className="text-center mt-5">
-            <Link to="/blog">
-              <Button variant="primary" size="lg" className="px-5">
-                Ver todos los artículos
-              </Button>
-            </Link>
           </div>
-        </Container>
+
+          <div className="text-center mt-8">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/blog">Ver todos los artículos</Link>
+            </Button>
+          </div>
+        </div>
       </section>
-    </>
+    </div>
   );
 };
 
