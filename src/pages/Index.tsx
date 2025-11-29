@@ -23,17 +23,7 @@ const Index = () => {
         <div className="container mx-auto relative z-10 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Column - Logo and Text */}
-            <div className="flex flex-col items-center justify-center space-y-6">
-              <img src="/images/logo-blanco.png" alt="Aguanta la Música" className="w-full max-w-md" />
-              <div className="text-center text-white space-y-1">
-                <p className="text-xl md:text-2xl font-semibold tracking-wide">
-                  AGUANTA LA MÚSICA
-                </p>
-                <p className="text-lg md:text-xl tracking-wide">
-                  VIVIMOS LA MÚSICA
-                </p>
-              </div>
-            </div>
+            
 
             {/* Right Column - Heading and Description */}
             <div className="text-center md:text-left space-y-6">
