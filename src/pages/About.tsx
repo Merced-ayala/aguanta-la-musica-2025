@@ -130,12 +130,12 @@ const About = () => {
               Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
             </p>
             <a
-              href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
+              href="https://www.linkedin.com/in/david-caycedo-galvis/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex px-8 py-3 rounded-full bg-black text-white font-semibold text-sm md:text-base hover:bg-white hover:text-black transition uppercase"
+              className="inline-flex px-8 py-3 rounded-full bg-black text-white font-semibold text-sm md:text-base hover:bg-white hover:text-black transition"
             >
-              ¡Sígueme en LinkedIn!
+              ¡Sígueme en linkedin!
             </a>
           </div>
         </div>
