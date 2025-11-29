@@ -133,12 +133,12 @@ const About = () => {
       </section>
 
       {/* Nuestro Equipo */}
-      <section className="w-full bg-[#EA2336] py-20">
+      <section className="w-full bg-white py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
           <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-black">
             Nuestro Equipo
           </h2>
-          <p className="text-black mb-12 max-w-3xl mx-auto">
+          <p className="text-gray-700 mb-12 max-w-3xl mx-auto">
             Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
           </p>
 
