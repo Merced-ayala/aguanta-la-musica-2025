@@ -156,10 +156,10 @@ const Services = () => {
       {/* Conoce más + Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black mb-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-6">
             Conoce más
           </h1>
-          <p className="text-center text-lg text-gray-800 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-white max-w-3xl mx-auto">
             Aquí encontrarás una explicación clara de nuestros servicios: talleres, sesiones individuales y procesos grupales. Explora cada opción para conocer cómo la musicoterapia puede acompañar tu bienestar personal o el de tu equipo.
           </p>
         </div>
