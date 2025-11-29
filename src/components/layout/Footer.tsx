@@ -63,7 +63,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/merced-ayala-6005b122b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white underline hover:text-gray-300 transition-colors"
+            className="text-white hover:text-gray-300 transition-colors"
           >
             Desarrollado por Merced Ayala
           </a>
