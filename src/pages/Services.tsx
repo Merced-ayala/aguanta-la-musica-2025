@@ -62,7 +62,7 @@ const Services = () => {
                   </div>
                 </div>
                 <a
-                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Talleres"
+                  href="https://wa.me/573142244057?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Talleres"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -102,7 +102,7 @@ const Services = () => {
                   </div>
                 </div>
                 <a
-                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20las%20Sesiones%20Individuales"
+                  href="https://wa.me/573142244057?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20las%20Sesiones%20Individuales"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -151,7 +151,7 @@ const Services = () => {
                   </div>
                 </div>
                 <a
-                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales%20de%20Musicoterapia"
+                  href="https://wa.me/573142244057?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales%20de%20Musicoterapia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -194,7 +194,7 @@ const Services = () => {
                 Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
               </p>
                 <a
-                  href="https://wa.me/573001234567?text=Hola,%20quiero%20conocer%20más%20sobre%20los%20Talleres"
+                  href="https://wa.me/573142244057?text=Hola,%20quiero%20conocer%20más%20sobre%20los%20Talleres"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -241,7 +241,7 @@ const Services = () => {
                 Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.
               </p>
               <a
-                href="https://wa.me/573001234567"
+                href="https://wa.me/573142244057"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -271,7 +271,7 @@ const Services = () => {
                 <strong>Cantidad máxima de integrantes:</strong> 30 personas
               </p>
               <a
-                href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales"
+                href="https://wa.me/573142244057?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20Procesos%20Grupales"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-block text-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
@@ -305,7 +305,7 @@ const Services = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="https://wa.me/573001234567"
+                href="https://wa.me/573142244057"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300 inline-flex items-center gap-2 justify-center"
