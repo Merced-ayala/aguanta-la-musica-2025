@@ -163,7 +163,7 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
               </p>
-                <button className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black">
+                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
                   ¡Cuéntanos sobre tu equipo!
                 </button>
             </div>
@@ -209,7 +209,7 @@ const Services = () => {
                 href="https://wa.me/573001234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black inline-flex items-center justify-center"
+                className="w-full inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300"
               >
                 ¡Agenda tu primera sesión con el 50% de descuento!
               </a>
@@ -235,7 +235,7 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 <strong>Cantidad máxima de integrantes:</strong> 30 personas
               </p>
-              <button className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black">
+              <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
                 ¡Conversemos!
               </button>
             </div>
