@@ -60,45 +60,45 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Hero: Acerca de Nosotros */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            Acerca de <span className="text-[#EA2336]">Nosotros</span>
+            Acerca de <span className="text-white">Nosotros</span>
           </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-white max-w-3xl mx-auto mb-12">
             En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
 
           <div className="grid gap-8 md:grid-cols-3">
             {/* Misión */}
-            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
                 <span className="text-[#EA2336] text-4xl">♪</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Nuestra Misión</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-black">Nuestra Misión</h3>
+              <p className="text-gray-900">
                 Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
               </p>
             </div>
 
             {/* Visión */}
-            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
                 <span className="text-[#FFAC03] text-4xl">◎</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Nuestra Visión</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-black">Nuestra Visión</h3>
+              <p className="text-gray-900">
                 Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
               </p>
             </div>
 
             {/* Valores */}
-            <div className="bg-[#FCEEDD] rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
+            <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-full bg-[#FADFCC] flex items-center justify-center mb-4">
                 <span className="text-gray-900 text-4xl">♡</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Nuestros Valores</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-black">Nuestros Valores</h3>
+              <p className="text-gray-900">
                 Compromiso con la excelencia, respeto por la diversidad, innovación constante y dedicación al bienestar de quienes confían en nosotros.
               </p>
             </div>
