@@ -1,80 +1,74 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const CustomNavbar = () => {
+  const [expanded, setExpanded] = useState(false);
   const location = useLocation();
-
-  const navLinks = [
-    { name: "Inicio", path: "/" },
-    { name: "Acerca de Nosotros", path: "/acerca-de-nosotros" },
-    { name: "Servicios", path: "/servicios" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contáctanos", path: "/contacto" },
-  ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/images/logo-blanco.png" 
-              alt="Aguanta la Música" 
-              className="h-12"
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`block py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    </nav>
+    <Navbar expanded={expanded} expand="lg" className="navbar-custom fixed-top">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img 
+            src="/images/logo-blanco.png" 
+            alt="Aguanta la Música" 
+            height="50"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle 
+          aria-controls="basic-navbar-nav" 
+          onClick={() => setExpanded(!expanded)}
+        />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link 
+              as={Link} 
+              to="/" 
+              className={isActive("/") ? "fw-bold text-primary" : ""}
+              onClick={() => setExpanded(false)}
+            >
+              Inicio
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/acerca-de-nosotros" 
+              className={isActive("/acerca-de-nosotros") ? "fw-bold text-primary" : ""}
+              onClick={() => setExpanded(false)}
+            >
+              Acerca de
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/servicios" 
+              className={isActive("/servicios") ? "fw-bold text-primary" : ""}
+              onClick={() => setExpanded(false)}
+            >
+              Servicios
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/blog" 
+              className={isActive("/blog") ? "fw-bold text-primary" : ""}
+              onClick={() => setExpanded(false)}
+            >
+              Blog
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/contacto" 
+              className={isActive("/contacto") ? "fw-bold text-primary" : ""}
+              onClick={() => setExpanded(false)}
+            >
+              Contacto
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default CustomNavbar;
