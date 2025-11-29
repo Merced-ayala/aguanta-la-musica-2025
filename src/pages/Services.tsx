@@ -16,73 +16,122 @@ const Services = () => {
 
   return (
     <div className="min-h-screen pt-24 pb-20">
-      {/* Hero Section */}
+      {/* Hero Section y Tarjetas de Servicios */}
       <section className="w-full bg-[#C4AF00] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-black">
-              Nuestros Servicios
+          {/* Título y subtítulo */}
+          <div className="text-center mb-16">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+              <span className="text-black">Nuestros </span>
+              <span className="text-white">Servicios</span>
             </h1>
-            <p className="text-lg text-black max-w-3xl mx-auto">
+            <p className="text-lg text-white max-w-3xl mx-auto">
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Servicios Cards */}
-      <section className="w-full bg-[#C4AF00] py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-3">
+          {/* Tarjetas de servicios */}
+          <div className="grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto">
             {/* Talleres */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src="/images/servicios/sesiones.jpeg" 
                 alt="Talleres - Aguanta la Música"
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-2xl mb-3">Talleres</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="p-8">
+                <h3 className="font-heading font-bold text-2xl mb-2 text-black">Talleres</h3>
+                <p className="text-sm text-gray-600 mb-4">Empresas y organizaciones</p>
+                <p className="text-gray-700 mb-6">
                   Experiencias diseñadas a la medida de tus necesidades en áreas como yoga, relajación, liderazgo, gestión emocional, creatividad, manejo del estrés, trabajo en equipo.
                 </p>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>Duración:</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Modalidad:</span>
+                  </div>
+                </div>
+                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
                   Solicitar información
                 </button>
               </div>
             </div>
 
             {/* Sesiones individuales */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src="/images/servicios/sesiones-originales.jpeg" 
                 alt="Sesiones Individuales - Aguanta la Música"
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-2xl mb-3">Sesiones individuales</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="p-8">
+                <h3 className="font-heading font-bold text-2xl mb-2 text-black">Sesiones individuales</h3>
+                <p className="text-sm text-gray-600 mb-4">Personas que buscan crecimiento personal</p>
+                <p className="text-gray-700 mb-6">
                   Musicoterapia, canto y técnica vocal, percusión, y metales. Nuestros expertos te guiarán en tu proceso de crecimiento con la música.
                 </p>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>Duración:</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Modalidad:</span>
+                  </div>
+                </div>
+                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
                   Solicitar información
                 </button>
               </div>
             </div>
 
             {/* Procesos grupales */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg lg:col-span-2 lg:max-w-xl lg:mx-auto lg:w-full">
               <img 
                 src="/images/servicios/sesiones.jpeg" 
                 alt="Procesos Grupales - Aguanta la Música"
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
-              <div className="p-6">
-                <h3 className="font-heading font-bold text-2xl mb-3">Procesos grupales de musicoterapia</h3>
-                <p className="text-gray-700 mb-4">
-                  Proceso continuo para grupos en los que la terapia busca incidir en cómo los participantes se relacionan con su entorno, sus valores comunes y posibilidades. Ideal para empresas y otra comunidades.
+              <div className="p-8">
+                <h3 className="font-heading font-bold text-2xl mb-2 text-black">Procesos grupales de musicoterapia</h3>
+                <p className="text-sm text-gray-600 mb-4">Grupos y comunidades</p>
+                <p className="text-gray-700 mb-6">
+                  Proceso continuo para grupos en los que la terapia busca incidir en cómo los participantes se relacionan con su entorno, sus valores comunes y posibilidades. Ideal para empresas y otras comunidades.
                 </p>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition">
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>Duración:</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-[#EA2336]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Modalidad:</span>
+                  </div>
+                </div>
+                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
                   Solicitar información
                 </button>
               </div>
