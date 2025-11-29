@@ -9,13 +9,16 @@ const CustomNavbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <Navbar expanded={expanded} expand="lg" className="navbar-custom fixed-top">
+    <Navbar expanded={expanded} expand="lg" className="navbar-custom fixed-top py-3">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img 
             src="/images/logo-blanco.png" 
             alt="Aguanta la Música" 
-            height="50"
+            height="55"
+            style={{ transition: 'transform 0.3s ease' }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           />
         </Navbar.Brand>
         <Navbar.Toggle 
@@ -23,11 +26,11 @@ const CustomNavbar = () => {
           onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto align-items-lg-center">
             <Nav.Link 
               as={Link} 
               to="/" 
-              className={isActive("/") ? "fw-bold text-primary" : ""}
+              className={`mx-lg-2 ${isActive("/") ? "fw-bold text-primary" : ""}`}
               onClick={() => setExpanded(false)}
             >
               Inicio
@@ -35,7 +38,7 @@ const CustomNavbar = () => {
             <Nav.Link 
               as={Link} 
               to="/acerca-de-nosotros" 
-              className={isActive("/acerca-de-nosotros") ? "fw-bold text-primary" : ""}
+              className={`mx-lg-2 ${isActive("/acerca-de-nosotros") ? "fw-bold text-primary" : ""}`}
               onClick={() => setExpanded(false)}
             >
               Acerca de
@@ -43,7 +46,7 @@ const CustomNavbar = () => {
             <Nav.Link 
               as={Link} 
               to="/servicios" 
-              className={isActive("/servicios") ? "fw-bold text-primary" : ""}
+              className={`mx-lg-2 ${isActive("/servicios") ? "fw-bold text-primary" : ""}`}
               onClick={() => setExpanded(false)}
             >
               Servicios
@@ -51,7 +54,7 @@ const CustomNavbar = () => {
             <Nav.Link 
               as={Link} 
               to="/blog" 
-              className={isActive("/blog") ? "fw-bold text-primary" : ""}
+              className={`mx-lg-2 ${isActive("/blog") ? "fw-bold text-primary" : ""}`}
               onClick={() => setExpanded(false)}
             >
               Blog
@@ -59,7 +62,7 @@ const CustomNavbar = () => {
             <Nav.Link 
               as={Link} 
               to="/contacto" 
-              className={isActive("/contacto") ? "fw-bold text-primary" : ""}
+              className={`mx-lg-2 ${isActive("/contacto") ? "fw-bold text-primary" : ""}`}
               onClick={() => setExpanded(false)}
             >
               Contacto

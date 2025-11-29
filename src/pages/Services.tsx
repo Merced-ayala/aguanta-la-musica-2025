@@ -21,34 +21,33 @@ const Services = () => {
         />
       </Helmet>
 
-      <section className="py-5">
+      <section className="section-padding-lg">
         <Container>
           <div className="text-center mb-5">
-            <h1 className="letras display-4 mb-4">
+            <h1 className="letras display-3 mb-4">
               Nuestros <span className="text-primary">Servicios</span>
             </h1>
-            <p className="fs-5 text-muted">
+            <p className="lead text-muted-custom mx-auto" style={{ maxWidth: '800px' }}>
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
 
-          <Row className="g-4">
+          <Row className="g-4 g-lg-5">
             {servicios.map((servicio) => (
               <Col key={servicio.id} md={6} lg={4}>
-                <Card className="service-card h-100 border-0 shadow">
+                <Card className="service-card">
                   <Card.Img 
                     variant="top" 
                     src={servicio.imagen} 
                     alt={servicio.titulo}
-                    style={{ height: "250px", objectFit: "cover" }}
                   />
                   <Card.Body className="d-flex flex-column">
-                    <Card.Title className="letras h3">{servicio.titulo}</Card.Title>
-                    <Card.Text className="flex-grow-1">
+                    <Card.Title className="letras h3 mb-3">{servicio.titulo}</Card.Title>
+                    <Card.Text className="flex-grow-1 text-gray-600 mb-4">
                       {servicio.descripcion}
                     </Card.Text>
                     <Link to="/contacto">
-                      <Button variant="primary" className="mt-3 w-100">
+                      <Button variant="primary" className="w-100">
                         Solicitar información
                       </Button>
                     </Link>
@@ -58,18 +57,20 @@ const Services = () => {
             ))}
           </Row>
 
-          <div className="mt-5 p-5 bg-light-custom rounded text-center">
-            <h2 className="letras h3 mb-3">
-              ¿Tienes dudas sobre cuál servicio es para ti?
-            </h2>
-            <p className="text-muted mb-4">
-              Agenda una sesión de orientación gratuita y conversemos sobre cómo la musicoterapia puede ayudarte.
-            </p>
-            <Link to="/contacto">
-              <Button variant="primary" size="lg">
-                Agendar consulta gratuita
-              </Button>
-            </Link>
+          <div className="section-feature mt-5">
+            <div className="text-center">
+              <h2 className="letras h3 mb-3">
+                ¿Tienes dudas sobre cuál servicio es para ti?
+              </h2>
+              <p className="text-muted-custom mb-4 mx-auto" style={{ maxWidth: '600px' }}>
+                Agenda una sesión de orientación gratuita y conversemos sobre cómo la musicoterapia puede ayudarte.
+              </p>
+              <Link to="/contacto">
+                <Button variant="primary" size="lg" className="px-5">
+                  Agendar consulta gratuita
+                </Button>
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
