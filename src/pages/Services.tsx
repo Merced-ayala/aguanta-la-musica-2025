@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, MapPin } from "lucide-react";
 import { getServicios } from "@/services/serviciosService";
 
@@ -20,57 +18,58 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="font-display font-bold text-4xl md:text-5xl mb-4">
+    <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
+      <div className="container">
+        <div className="text-center mb-5">
+          <h1 className="font-heading fw-bold display-4 mb-3">
             Nuestros <span className="text-primary">Servicios</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '32rem' }}>
             Experiencias musicales diseñadas para acompañarte en tu proceso de bienestar y crecimiento personal
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="row g-4" style={{ maxWidth: '80rem', margin: '0 auto' }}>
           {servicios.map((servicio) => (
-            <Card key={servicio.id} className="hover:shadow-lg transition-shadow flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-2xl">{servicio.titulo}</CardTitle>
-                <CardDescription className="text-base">{servicio.publicoObjetivo}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <p className="text-muted-foreground mb-6">{servicio.descripcion}</p>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="w-4 h-4 mr-2 text-primary" />
-                    <span>Duración: {servicio.duracion}</span>
+            <div key={servicio.id} className="col-md-6">
+              <div className="card h-100">
+                <div className="card-body d-flex flex-column">
+                  <h2 className="card-title font-heading h4">{servicio.titulo}</h2>
+                  <p className="text-muted mb-4">{servicio.publicoObjetivo}</p>
+                  
+                  <p className="text-muted mb-4 flex-grow-1">{servicio.descripcion}</p>
+                  
+                  <div className="d-flex flex-column gap-3 mb-4">
+                    <div className="d-flex align-items-center text-muted small">
+                      <Clock size={16} className="me-2 text-primary" />
+                      <span>Duración: {servicio.duracion}</span>
+                    </div>
+                    <div className="d-flex align-items-center text-muted small">
+                      <MapPin size={16} className="me-2 text-primary" />
+                      <span>Modalidad: {servicio.modalidad}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4 mr-2 text-primary" />
-                    <span>Modalidad: {servicio.modalidad}</span>
-                  </div>
+                  
+                  <Link to="/contacto" className="btn btn-primary w-100">
+                    Solicitar información
+                  </Link>
                 </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link to="/contacto">Solicitar información</Link>
-                </Button>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-gradient-to-br from-primary/10 to-secondary/10 p-8 md:p-12 rounded-lg max-w-3xl mx-auto">
-          <h2 className="font-display font-bold text-2xl md:text-3xl mb-4">
+        <div className="mt-5 text-center p-5 rounded mx-auto" 
+             style={{ background: 'linear-gradient(to bottom right, rgba(232, 37, 55, 0.1), rgba(251, 172, 24, 0.1))', maxWidth: '48rem' }}>
+          <h2 className="font-heading fw-bold h3 mb-3">
             ¿Tienes dudas sobre cuál servicio es para ti?
           </h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted mb-4">
             Agenda una sesión de orientación gratuita y conversemos sobre cómo la musicoterapia puede ayudarte.
           </p>
-          <Button asChild size="lg">
-            <Link to="/contacto">Agendar consulta gratuita</Link>
-          </Button>
+          <Link to="/contacto" className="btn btn-primary btn-lg px-4">
+            Agendar consulta gratuita
+          </Link>
         </div>
       </div>
     </div>
