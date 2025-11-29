@@ -3,62 +3,54 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t border-border">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-display font-bold text-lg mb-4">Aguanta la Música</h3>
-            <p className="text-sm text-muted-foreground">
+    <footer className="footer-custom">
+      <div className="container">
+        <div className="row g-4">
+          <div className="col-md-4">
+            <h5>Aguanta la Música</h5>
+            <p className="mb-0">
               Creamos experiencias musicales significativas para personas, entidades y empresas.
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Enlaces</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Inicio
-                </Link>
+          <div className="col-md-4">
+            <h5>Enlaces</h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <Link to="/">Inicio</Link>
               </li>
-              <li>
-                <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">
-                  Servicios
-                </Link>
+              <li className="mb-2">
+                <Link to="/servicios">Servicios</Link>
               </li>
-              <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </Link>
+              <li className="mb-2">
+                <Link to="/blog">Blog</Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Síguenos</h4>
-            <div className="flex space-x-4">
+          <div className="col-md-4">
+            <h5>Síguenos</h5>
+            <div className="d-flex gap-3">
               <a
                 href="https://www.linkedin.com/in/merced-ayala"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/soyelcaysi/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram size={20} />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2025 Aguanta la Música. Todos los derechos reservados.</p>
+        <div className="footer-bottom">
+          <p className="mb-0">© 2025 Aguanta la Música. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
