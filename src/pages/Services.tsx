@@ -140,14 +140,18 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Título global Conoce más */}
+      <section className="py-10">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black">
+          Conoce más
+        </h1>
+      </section>
+
       {/* Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
           <div className="w-full">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-              <h1 className="text-3xl font-extrabold mb-4 text-black">
-                Conoce más
-              </h1>
               <h2 className="text-2xl font-semibold mb-4 text-black">
                 Talleres
               </h2>
@@ -193,9 +197,6 @@ const Services = () => {
           </div>
           <div className="w-full order-1 lg:order-2">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-              <h1 className="text-3xl font-extrabold mb-4 text-black">
-                Conoce más
-              </h1>
               <h2 className="text-2xl font-semibold mb-4 text-black">
                 Sesiones
               </h2>
@@ -205,9 +206,14 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-4">
                 Musicoterapia para tu bienestar a cargo de terapeutas altamente capacitados, o aprendizaje musical en áreas como canto, percusión y trombón.
               </p>
-              <p className="text-lg font-semibold text-[#EA2336] mb-6">
+              <a
+                href="https://wa.me/573001234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#EA2336] px-6 py-3 text-white font-semibold hover:bg-[#c93040] transition w-full text-center"
+              >
                 ¡Agenda tu primera sesión con el 50% de descuento!
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -218,9 +224,6 @@ const Services = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
           <div className="w-full">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-              <h1 className="text-3xl font-extrabold mb-4 text-black">
-                Conoce más
-              </h1>
               <h2 className="text-2xl font-semibold mb-4 text-black">
                 Procesos
               </h2>
@@ -263,7 +266,7 @@ const Services = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="https://wa.me/NUMERO_WHATSAPP"
+                href="https://wa.me/573001234567"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition inline-flex items-center gap-2"
@@ -272,7 +275,7 @@ const Services = () => {
               </a>
 
               <a
-                href="mailto:CORREO_AGUANTA"
+                href="mailto:contacto@aguantalamusica.com"
                 className="px-6 py-3 rounded-full border-2 border-[#EA2336] text-[#EA2336] font-semibold hover:bg-[#FCEEDD] transition inline-flex items-center gap-2"
               >
                 Escríbenos por correo
