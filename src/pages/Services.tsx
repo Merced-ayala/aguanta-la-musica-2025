@@ -61,7 +61,7 @@ const Services = () => {
                     <span>Modalidad:</span>
                   </div>
                 </div>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
+                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
                   Solicitar información
                 </button>
               </div>
@@ -96,7 +96,7 @@ const Services = () => {
                     <span>Modalidad:</span>
                   </div>
                 </div>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
+                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
                   Solicitar información
                 </button>
               </div>
@@ -131,7 +131,7 @@ const Services = () => {
                     <span>Modalidad:</span>
                   </div>
                 </div>
-                <button className="w-full px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#c93040] transition">
+                <button className="w-full px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300">
                   Solicitar información
                 </button>
               </div>
@@ -274,14 +274,14 @@ const Services = () => {
                 href="https://wa.me/573001234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-[#EA2336] text-white font-semibold hover:bg-[#FFAC03] hover:text-black transition inline-flex items-center gap-2"
+                className="px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300 inline-flex items-center gap-2 justify-center"
               >
                 Escríbenos por WhatsApp
               </a>
 
               <a
                 href="mailto:contacto@aguantalamusica.com"
-                className="px-6 py-3 rounded-full border-2 border-[#EA2336] text-[#EA2336] font-semibold hover:bg-[#FCEEDD] transition inline-flex items-center gap-2"
+                className="px-8 py-3 rounded-lg font-semibold text-white bg-[#EA2336] hover:bg-[#FFAC03] hover:text-black transition-all duration-300 inline-flex items-center gap-2 justify-center"
               >
                 Escríbenos por correo
               </a>
