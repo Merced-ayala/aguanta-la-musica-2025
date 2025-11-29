@@ -93,8 +93,15 @@ const Contact = () => {
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Teléfono</h3>
-                  <p className="text-muted-foreground">+57 300 123 4567</p>
+                  <h3 className="font-semibold mb-1">WhatsApp</h3>
+                  <a 
+                    href="https://wa.me/573142244057" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +57 314 224 4057
+                  </a>
                 </div>
               </div>
 
