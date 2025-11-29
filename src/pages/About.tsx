@@ -118,36 +118,35 @@ const About = () => {
       </section>
 
       {/* Sección "Hola, soy David Caycedo" */}
-      <section className="w-full bg-white py-16">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="bg-gradient-to-br from-[#EA2336]/5 to-[#FFAC03]/5 p-8 md:p-12 rounded-2xl">
-            <div className="grid gap-8 md:grid-cols-2 items-center">
-              {/* Foto */}
-              <div className="flex justify-center">
-                <img
-                  src="/images/team/david-caycedo.jpg"
-                  alt="David Caycedo"
-                  className="rounded-2xl object-cover w-full max-w-sm shadow-lg"
-                />
-              </div>
-              {/* Texto */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  ¡Hola! Soy <span className="text-[#EA2336]">David Caycedo Galvis</span>
-                </h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-full bg-[#FFAC03] text-black font-semibold hover:bg-[#EA2336] hover:text-white transition"
-                >
-                  ¡Sígueme en LinkedIn!
-                </a>
-              </div>
-            </div>
+      <section className="relative w-full min-h-[70vh] text-white">
+        {/* Imagen de fondo */}
+        <img
+          src="/images/team/david-caycedo.jpg"
+          alt="David Caycedo Galvis"
+          className="absolute inset-0 w-full h-full object-cover object-left"
+        />
+
+        {/* Capa oscura para contrastar el texto */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Contenido */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 flex items-center min-h-[70vh]">
+          <div className="ml-auto w-full md:w-1/2 text-center md:text-right">
+            <p className="text-2xl md:text-3xl mb-2 font-light">¡Hola! Soy</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+              David Caycedo Galvis
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8">
+              Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
+            </p>
+            <a
+              href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex px-8 py-3 rounded-full bg-black text-white font-semibold text-sm md:text-base hover:bg-white hover:text-black transition uppercase"
+            >
+              ¡Sígueme en LinkedIn!
+            </a>
           </div>
         </div>
       </section>
