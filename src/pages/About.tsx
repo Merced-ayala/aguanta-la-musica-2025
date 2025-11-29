@@ -60,20 +60,20 @@ const About = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       {/* Sección David Caycedo */}
-      <section className="w-full bg-background py-12">
+      <section className="w-full bg-white py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 rounded-lg max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-[#EA2336]/5 to-[#FFAC03]/5 p-8 md:p-12 rounded-lg max-w-4xl mx-auto">
             <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-              ¡Hola! Soy <span className="text-primary">David Caycedo Galvis</span>
+              ¡Hola! Soy <span className="text-[#EA2336]">David Caycedo Galvis</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-xl text-gray-700 mb-6">
               Fundador de Aguanta la Música, Magíster en Musicoterapia de la Universidad Nacional de Colombia y Terapeuta Gestalt
             </p>
             <a
-              href="LINKEDIN_DAVID"
+              href="https://www.linkedin.com/in/david-leonardo-caycedo-galvis-4b1b3b1b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-[#FFAC03] text-black font-semibold hover:bg-[#EA2336] hover:text-white transition"
             >
               ¡Sígueme en LinkedIn!
             </a>
@@ -81,21 +81,51 @@ const About = () => {
         </div>
       </section>
 
-      {/* Misión y Visión */}
-      <section className="w-full bg-background py-12">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-muted p-8 rounded-lg">
-              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Misión</h2>
-              <p className="text-muted-foreground">
+      {/* Acerca de Nosotros - Misión, Visión y Valores */}
+      <section className="w-full bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Acerca de <span className="text-[#EA2336]">Nosotros</span>
+          </h1>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+            En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica que fomenta el crecimiento de individuos y comunidades.
+          </p>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#EA2336] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h2 className="font-heading font-bold text-2xl mb-4">Nuestra Misión</h2>
+              <p className="text-gray-700">
                 Existimos porque queremos utilizar la música como una herramienta para fomentar el crecimiento de individuos y comunidades, brindando experiencias transformadoras por medio de nuestros servicios.
               </p>
             </div>
 
-            <div className="bg-muted p-8 rounded-lg">
-              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">Visión</h2>
-              <p className="text-muted-foreground">
-                Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamerica y el mundo.
+            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#FFAC03] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h2 className="font-heading font-bold text-2xl mb-4">Nuestra Visión</h2>
+              <p className="text-gray-700">
+                Aspiramos a ser líderes en el uso de Musicoterapia y la creación de espacios de encuentro y conexión mediante la música en Colombia, Latinoamérica y el mundo.
+              </p>
+            </div>
+
+            <div className="bg-[#FCEEDD] rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[#EA2336] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h2 className="font-heading font-bold text-2xl mb-4">Nuestros Valores</h2>
+              <p className="text-gray-700">
+                Compromiso con la excelencia, respeto por la diversidad, innovación constante y dedicación al bienestar de quienes confían en nosotros.
               </p>
             </div>
           </div>
@@ -103,30 +133,28 @@ const About = () => {
       </section>
 
       {/* Nuestro Equipo */}
-      <section className="w-full bg-[#EA2336] py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4 text-black">
+      <section className="w-full bg-[#EA2336] py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-black">
             Nuestro Equipo
           </h2>
-          <p className="text-center text-black mb-12 max-w-3xl mx-auto">
+          <p className="text-black mb-12 max-w-3xl mx-auto">
             Conoce a quienes estamos aquí para desarrollar y ofrecerte experiencias y servicios de alta calidad
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow p-6">
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-black hover:shadow-2xl transition-shadow">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
                 />
-                <div className="text-center">
-                  <h3 className="font-heading font-bold text-xl mb-2 text-black">{member.name}</h3>
-                  <p className="text-sm text-[#EA2336] font-semibold mb-3">{member.role}</p>
-                  <p className="text-sm text-black/80 leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
+                <h3 className="text-lg font-semibold mb-2">{member.name}</h3>
+                <p className="text-sm font-medium text-[#EA2336] mb-3">{member.role}</p>
+                <p className="text-sm leading-relaxed">
+                  {member.description}
+                </p>
               </div>
             ))}
           </div>
