@@ -140,14 +140,13 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Título global Conoce más */}
-      <section className="py-10">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black">
+      {/* Conoce más + Talleres - Detalle */}
+      <section className="w-full bg-[#C4AF00] py-12">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-black mb-10">
           Conoce más
         </h1>
       </section>
 
-      {/* Talleres - Detalle */}
       <section className="w-full bg-[#FFAC03] py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-6 grid gap-10 lg:grid-cols-2 items-center">
           <div className="w-full">
@@ -164,9 +163,9 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 Temas: relajación, manejo del estrés, trabajo en equipo, gestión emocional, liderazgo, creatividad, entre otros.
               </p>
-              <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
-                ¡Cuéntanos sobre tu equipo!
-              </button>
+                <button className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black">
+                  ¡Cuéntanos sobre tu equipo!
+                </button>
             </div>
           </div>
           <div className="w-full mt-8 lg:mt-0">
@@ -210,7 +209,7 @@ const Services = () => {
                 href="https://wa.me/573001234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#EA2336] px-6 py-3 text-white font-semibold hover:bg-[#c93040] transition w-full text-center"
+                className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black inline-flex items-center justify-center"
               >
                 ¡Agenda tu primera sesión con el 50% de descuento!
               </a>
@@ -236,7 +235,7 @@ const Services = () => {
               <p className="text-lg text-gray-800 mb-6">
                 <strong>Cantidad máxima de integrantes:</strong> 30 personas
               </p>
-              <button className="mt-4 bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+              <button className="w-full text-center font-semibold rounded-full bg-[#EA2336] text-white py-3 px-6 transition-all duration-300 hover:bg-[#FFAC03] hover:text-black">
                 ¡Conversemos!
               </button>
             </div>
