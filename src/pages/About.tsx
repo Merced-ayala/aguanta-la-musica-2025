@@ -14,74 +14,72 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
-      <div className="container" style={{ maxWidth: '56rem' }}>
-        <h1 className="font-heading fw-bold display-4 mb-4 text-center">
-          Acerca de <span className="text-primary">Nosotros</span>
-        </h1>
-
-        <div className="prose mx-auto">
-          <p className="fs-5 text-muted mb-5 text-center">
+    <div className="min-vh-100" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
+      <div className="container" style={{ maxWidth: '60rem' }}>
+        <div className="text-center mb-5 pt-4">
+          <h1 className="font-heading fw-bold display-3 mb-4">
+            Acerca de <span className="text-aguanta-red">Nosotros</span>
+          </h1>
+          <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '48rem', lineHeight: '1.6' }}>
             En Aguanta la Música creemos en el poder transformador de la música como herramienta terapéutica.
           </p>
+        </div>
 
-          <div className="row g-4 my-5">
-            <div className="col-md-4">
-              <div className="text-center p-4 bg-muted rounded">
-                <div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" 
-                     style={{ width: '4rem', height: '4rem', backgroundColor: 'rgba(232, 37, 55, 0.1)' }}>
-                  <Music2 size={32} style={{ color: 'var(--color-primary)' }} />
-                </div>
-                <h3 className="font-heading fw-semibold h5 mb-3">Nuestra Misión</h3>
-                <p className="text-muted small">
-                  Acompañar procesos de bienestar integral a través de experiencias musicales significativas y transformadoras.
-                </p>
+        <div className="row g-4 my-5">
+          <div className="col-md-4">
+            <div className="card-aguanta text-center">
+              <div className="mb-4">
+                <Music2 className="text-aguanta-red" size={48} />
               </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="text-center p-4 bg-muted rounded">
-                <div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" 
-                     style={{ width: '4rem', height: '4rem', backgroundColor: 'rgba(251, 172, 24, 0.1)' }}>
-                  <Target size={32} style={{ color: 'var(--color-secondary)' }} />
-                </div>
-                <h3 className="font-heading fw-semibold h5 mb-3">Nuestra Visión</h3>
-                <p className="text-muted small">
-                  Ser referentes en musicoterapia, promoviendo el bienestar emocional y el crecimiento personal a través de la música.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="text-center p-4 bg-muted rounded">
-                <div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" 
-                     style={{ width: '4rem', height: '4rem', backgroundColor: 'rgba(192, 216, 76, 0.1)' }}>
-                  <Heart size={32} style={{ color: 'var(--color-accent)' }} />
-                </div>
-                <h3 className="font-heading fw-semibold h5 mb-3">Nuestros Valores</h3>
-                <p className="text-muted small">
-                  Empatía, profesionalismo, creatividad y compromiso con el bienestar de cada persona que acompañamos.
-                </p>
-              </div>
+              <h2 className="font-heading fw-bold h3 mb-3">Nuestra Misión</h2>
+              <p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.7' }}>
+                Acompañar procesos de bienestar integral a través de experiencias musicales significativas y transformadoras.
+              </p>
             </div>
           </div>
 
-          <div className="p-4 rounded my-5" style={{ background: 'linear-gradient(to bottom right, rgba(232, 37, 55, 0.05), rgba(251, 172, 24, 0.05))' }}>
-            <h2 className="font-heading fw-bold h3 mb-3">¿Qué es la Musicoterapia?</h2>
-            <p className="mb-3">
+          <div className="col-md-4">
+            <div className="card-aguanta text-center">
+              <div className="mb-4">
+                <Target className="text-aguanta-yellow" size={48} />
+              </div>
+              <h2 className="font-heading fw-bold h3 mb-3">Nuestra Visión</h2>
+              <p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.7' }}>
+                Ser referentes en musicoterapia, promoviendo el bienestar emocional y el crecimiento personal a través de la música.
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card-aguanta text-center">
+              <div className="mb-4">
+                <Heart className="text-aguanta-accent" size={48} />
+              </div>
+              <h2 className="font-heading fw-bold h3 mb-3">Nuestros Valores</h2>
+              <p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.7' }}>
+                Empatía, profesionalismo, creatividad y compromiso con el bienestar de cada persona que acompañamos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="prose mx-auto">
+          <div className="p-5 rounded-4 my-5" style={{ background: 'linear-gradient(to bottom right, rgba(234, 35, 54, 0.08), rgba(255, 172, 3, 0.08))' }}>
+            <h2 className="font-heading fw-bold h3 mb-4">¿Qué es la Musicoterapia?</h2>
+            <p className="mb-3" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               La musicoterapia es el uso profesional de la música y sus elementos como intervención en ambientes médicos, educativos y cotidianos con individuos, grupos, familias o comunidades, buscando optimizar su calidad de vida y mejorar su salud física, social, comunicativa, emocional, intelectual y espiritual.
             </p>
-            <p className="mb-0">
+            <p className="mb-0" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               A través de la creación musical, la escucha, el movimiento y otras experiencias musicales, la musicoterapia facilita procesos de autoconocimiento, expresión emocional y transformación personal.
             </p>
           </div>
 
-          <div className="my-5">
-            <h2 className="font-heading fw-bold h3 mb-3">Nuestro Enfoque Terapéutico</h2>
-            <p className="mb-3">
+          <div className="my-5 px-3">
+            <h2 className="font-heading fw-bold h3 mb-4">Nuestro Enfoque Terapéutico</h2>
+            <p className="mb-3" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               En Aguanta la Música trabajamos desde un enfoque humanista e integrativo, combinando principios de la Terapia Gestalt con las técnicas propias de la musicoterapia. Esto significa que:
             </p>
-            <ul className="mb-3">
+            <ul className="mb-3" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
               <li className="mb-2">Partimos del aquí y ahora, de lo que está presente en cada sesión</li>
               <li className="mb-2">Respetamos tu proceso único y tus tiempos</li>
               <li className="mb-2">Fomentamos la conciencia y la responsabilidad personal</li>
@@ -90,12 +88,12 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="bg-muted p-4 rounded my-5">
-            <h2 className="font-heading fw-bold h3 mb-3">¿Para quién es la Musicoterapia?</h2>
-            <p className="mb-3">
+          <div className="p-5 rounded-4 my-5" style={{ backgroundColor: 'var(--color-muted)' }}>
+            <h2 className="font-heading fw-bold h3 mb-4">¿Para quién es la Musicoterapia?</h2>
+            <p className="mb-3" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               La musicoterapia es para todas las personas que deseen explorar nuevas formas de expresión, gestionar sus emociones y mejorar su bienestar. No se requieren conocimientos musicales previos.
             </p>
-            <p className="mb-0">
+            <p className="mb-0" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
               Trabajamos con adultos en procesos personales, con empresas que buscan mejorar el bienestar de sus equipos, y con instituciones educativas que quieren promover el desarrollo socioemocional de sus estudiantes.
             </p>
           </div>

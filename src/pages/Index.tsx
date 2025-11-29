@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <div className="min-vh-100">
       {/* Hero Section */}
-      <section className="py-5" style={{ paddingTop: '8rem', paddingBottom: '5rem', background: 'linear-gradient(to bottom right, #ffffff 0%, #fceede33 50%, #ffffff 100%)' }}>
+      <section className="section-hero" style={{ paddingTop: '8rem' }}>
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-md-6 text-center">
@@ -29,16 +29,16 @@ const Index = () => {
                 src="/images/logo-blanco.png" 
                 alt="Aguanta la Música Logo" 
                 className="img-fluid"
-                style={{ maxWidth: '28rem' }}
+                style={{ maxWidth: '26rem' }}
               />
             </div>
             <div className="col-md-6 text-center text-md-start">
-              <h1 className="font-heading fw-bold display-4 mb-4 lh-sm">
+              <h1 className="font-heading fw-bold display-3 mb-4 lh-sm">
                 Aquí descubrirás<br />
                 qué es la<br />
-                <span className="text-primary">Musicoterapia</span>
+                <span className="text-aguanta-red">Musicoterapia</span>
               </h1>
-              <p className="fs-5 mb-4">
+              <p className="fs-5 mb-0" style={{ lineHeight: '1.6' }}>
                 Nos gusta compartir y crear juntos. Creemos que la música es poderosa y estamos aquí para acompañarte a descubrir tu potencial.
               </p>
             </div>
@@ -47,21 +47,21 @@ const Index = () => {
       </section>
 
       {/* Video and Mission Section */}
-      <section className="py-5 bg-muted">
+      <section className="section-light">
         <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-md-6 text-center text-md-start">
-              <h2 className="font-heading fw-bold display-5 mb-4 lh-sm">
+              <h2 className="font-heading fw-bold display-4 mb-4 lh-sm">
                 Usar la música<br />
                 como terapia<br />
-                <span className="text-primary">cambiará tu vida</span>
+                <span className="text-aguanta-red">cambiará tu vida</span>
               </h2>
-              <p className="fs-5">
+              <p className="fs-5 mb-0" style={{ lineHeight: '1.6' }}>
                 Creamos experiencias musicales significativas para personas, entidades y empresas.
               </p>
             </div>
             <div className="col-md-6 text-center">
-              <div className="ratio ratio-16x9 rounded shadow-lg overflow-hidden" style={{ maxWidth: '42rem', margin: '0 auto' }}>
+              <div className="ratio ratio-16x9 rounded-4 shadow overflow-hidden" style={{ maxWidth: '42rem', margin: '0 auto' }}>
                 <iframe
                   src="https://www.youtube.com/embed/2Yc3eJru998"
                   title="Musicoterapia - Aguanta la Música"
@@ -75,18 +75,18 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-5">
+      <section className="section-default">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="font-heading fw-bold display-5 mb-3">
-              Nuestros <span className="text-primary">Servicios</span>
+            <h2 className="font-heading fw-bold display-4 mb-4">
+              Nuestros <span className="text-aguanta-red">Servicios</span>
             </h2>
-            <p className="fs-5 mx-auto" style={{ maxWidth: '48rem' }}>
+            <p className="fs-5 mx-auto" style={{ maxWidth: '48rem', lineHeight: '1.6' }}>
               Aquí descubrirás a la música como terapia, como formación y como alternativa para que tú o tu equipo puedan crecer.
             </p>
           </div>
 
-          <div className="row g-4" style={{ maxWidth: '72rem', margin: '0 auto' }}>
+          <div className="row g-4" style={{ maxWidth: '75rem', margin: '0 auto' }}>
             {servicios.map((servicio) => (
               <div key={servicio.id} className="col-md-4">
                 <div className="card h-100">
@@ -95,11 +95,14 @@ const Index = () => {
                       src={servicio.imagen}
                       alt={servicio.titulo}
                       className="w-100 h-100 object-fit-cover"
+                      style={{ transition: 'transform 0.3s ease' }}
+                      onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                      onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
                   </div>
-                  <div className="card-body">
-                    <h3 className="card-title font-heading fw-bold h5">{servicio.titulo}</h3>
-                    <p className="card-text small">
+                  <div className="card-body p-4">
+                    <h3 className="card-title font-heading fw-bold h5 mb-3">{servicio.titulo}</h3>
+                    <p className="card-text mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                       {servicio.descripcion}
                     </p>
                   </div>
@@ -109,7 +112,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-5">
-            <Link to="/servicios" className="btn btn-primary btn-lg fw-semibold px-4">
+            <Link to="/servicios" className="btn btn-aguanta-primary btn-lg px-5">
               Ver todos los servicios
             </Link>
           </div>
@@ -117,10 +120,10 @@ const Index = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="py-5 bg-muted">
+      <section className="section-light">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="font-heading fw-bold display-5 mb-3">Blog</h2>
+            <h2 className="font-heading fw-bold display-4 mb-3">Blog</h2>
           </div>
 
           <div className="row g-4">
@@ -131,15 +134,15 @@ const Index = () => {
                     src={articulo.imagen}
                     alt={articulo.titulo}
                     className="card-img-top"
-                    style={{ height: '12rem', objectFit: 'cover' }}
+                    style={{ height: '14rem', objectFit: 'cover' }}
                   />
-                  <div className="card-body d-flex flex-column">
-                    <h3 className="card-title font-heading fw-bold h5">{articulo.titulo}</h3>
-                    <p className="card-text text-muted small line-clamp-3 flex-grow-1">
+                  <div className="card-body d-flex flex-column p-4">
+                    <h3 className="card-title font-heading fw-bold h5 mb-3">{articulo.titulo}</h3>
+                    <p className="card-text text-muted line-clamp-3 flex-grow-1" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                       {articulo.extracto}
                     </p>
-                    <Link to={`/blog/${articulo.slug}`} className="btn btn-link text-decoration-none w-100 mt-2">
-                      Leer más
+                    <Link to={`/blog/${articulo.slug}`} className="btn btn-link text-decoration-none p-0 mt-3 fw-semibold text-aguanta-red">
+                      Leer más →
                     </Link>
                   </div>
                 </div>
@@ -147,8 +150,8 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-4">
-            <Link to="/blog" className="btn btn-outline-dark btn-lg px-4">
+          <div className="text-center mt-5">
+            <Link to="/blog" className="btn btn-aguanta-outline btn-lg px-5">
               Ver todos los artículos
             </Link>
           </div>

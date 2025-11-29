@@ -24,14 +24,14 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="min-vh-100 py-5" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
+    <div className="min-vh-100" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
       <div className="container">
-        <div className="text-center mb-5">
-          <h1 className="font-heading fw-bold display-4 mb-3">
+        <div className="text-center mb-5 pt-4">
+          <h1 className="font-heading fw-bold display-3 mb-4">
             Blog
           </h1>
-          <p className="fs-5 text-muted">
-            Artículos sobre musicoterapia, bienestar y salud mental
+          <p className="fs-5 text-muted mx-auto" style={{ maxWidth: '40rem', lineHeight: '1.6' }}>
+            Artículos sobre musicoterapia, bienestar y desarrollo personal
           </p>
         </div>
 
@@ -40,7 +40,7 @@ const Blog = () => {
           {categorias.map((categoria) => (
             <button
               key={categoria}
-              className={`btn ${categoriaSeleccionada === categoria ? 'btn-primary' : 'btn-outline-dark'}`}
+              className={`btn ${categoriaSeleccionada === categoria ? 'btn-aguanta-primary' : 'btn-aguanta-outline'}`}
               onClick={() => setCategoriaSeleccionada(categoria)}
             >
               {categoria}
@@ -57,26 +57,30 @@ const Blog = () => {
                   src={articulo.imagen}
                   alt={articulo.titulo}
                   className="card-img-top"
-                  style={{ height: '12rem', objectFit: 'cover' }}
+                  style={{ height: '14rem', objectFit: 'cover' }}
                 />
-                <div className="card-body d-flex flex-column">
-                  <div className="text-primary fw-semibold small mb-2">
-                    {articulo.categoria}
+                <div className="card-body d-flex flex-column p-4">
+                  <div className="mb-3">
+                    <span className="badge text-white" style={{ backgroundColor: 'var(--color-primary)', fontSize: '0.75rem', padding: '0.4rem 0.8rem', borderRadius: '0.5rem' }}>
+                      {articulo.categoria}
+                    </span>
                   </div>
-                  <h3 className="card-title h5">{articulo.titulo}</h3>
-                  <p className="card-text text-muted small line-clamp-4 flex-grow-1">
+                  <h2 className="card-title font-heading fw-bold h5 mb-3">{articulo.titulo}</h2>
+                  <p className="card-text text-muted line-clamp-3 flex-grow-1" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                     {articulo.extracto}
                   </p>
-                  <div className="text-muted small mt-3">
-                    {new Date(articulo.fechaPublicacion).toLocaleDateString("es-ES", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                  <div className="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                    <small className="text-muted">
+                      {new Date(articulo.fechaPublicacion).toLocaleDateString("es-ES", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </small>
+                    <Link to={`/blog/${articulo.slug}`} className="btn btn-link text-decoration-none p-0 fw-semibold text-aguanta-red">
+                      Leer más →
+                    </Link>
                   </div>
-                  <Link to={`/blog/${articulo.slug}`} className="btn btn-link text-decoration-none w-100 mt-2">
-                    Leer más
-                  </Link>
                 </div>
               </div>
             </div>
