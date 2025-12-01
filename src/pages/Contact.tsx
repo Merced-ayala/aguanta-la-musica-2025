@@ -72,7 +72,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">contacto@aguantalamusica.com</p>
+                  <p className="text-muted-foreground">david.caycedo@aguantalamusica.com</p>
                 </div>
               </div>
 
