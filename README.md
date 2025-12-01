@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# Aguanta la Música
 
-## Project info
+Sitio web oficial de Aguanta la Música - Servicios de musicoterapia para empresas en Bogotá, Colombia.
 
-**URL**: https://lovable.dev/projects/dc197f7c-648c-4189-812b-867a23f5228c
+## Stack Tecnológico
 
-## How can I edit this code?
+Este proyecto está construido con tecnologías modernas de desarrollo web:
 
-There are several ways of editing your application.
+- **React 18.3** - Librería para construir interfaces de usuario
+- **TypeScript** - Tipado estático para JavaScript
+- **Vite** - Build tool rápido y moderno
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Componentes UI con Radix UI
+- **React Router DOM** - Enrutamiento client-side
+- **React Query** - Gestión de estado del servidor
+- **React Hook Form + Zod** - Formularios con validación
 
-**Use Lovable**
+## Requisitos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dc197f7c-648c-4189-812b-867a23f5228c) and start prompting.
+- Node.js 18+ y npm
 
-Changes made via Lovable will be committed automatically to this repo.
+## Instalación
 
-**Use your preferred IDE**
+```bash
+# Clonar el repositorio
+git clone <URL_DEL_REPOSITORIO>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Instalar dependencias
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+El sitio estará disponible en `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts Disponibles
 
-**Use GitHub Codespaces**
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Crea la build de producción
+- `npm run preview` - Previsualiza la build de producción
+- `npm run lint` - Ejecuta el linter de código
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Estructura del Proyecto
 
-## What technologies are used for this project?
+```
+src/
+├── components/      # Componentes React reutilizables
+│   ├── layout/     # Navbar, Footer, Layout
+│   └── ui/         # Componentes UI de shadcn
+├── pages/          # Páginas de la aplicación
+├── services/       # Servicios de datos
+├── data/           # Archivos JSON con contenido
+├── hooks/          # Custom React hooks
+└── lib/            # Utilidades y helpers
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Para crear una build de producción:
 
-## How can I deploy this project?
+```bash
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/dc197f7c-648c-4189-812b-867a23f5228c) and click on Share -> Publish.
+Los archivos optimizados se generarán en la carpeta `dist/` y pueden ser desplegados en cualquier servicio de hosting estático (Netlify, Vercel, Hostinger, etc.)
 
-## Can I connect a custom domain to my Lovable project?
+## Licencia
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2024 Aguanta la Música. Todos los derechos reservados.
