@@ -2,33 +2,39 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+
 const formSchema = z.object({
   nombre: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(100),
   email: z.string().email("Email inválido").max(255),
+  telefono: z.string().optional(),
   asunto: z.string().min(3, "El asunto debe tener al menos 3 caracteres").max(200),
   mensaje: z.string().min(10, "El mensaje debe tener al menos 10 caracteres").max(1000)
 });
+
 type FormValues = z.infer<typeof formSchema>;
+
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       nombre: "",
       email: "",
+      telefono: "",
       asunto: "",
       mensaje: ""
     }
   });
+
   useEffect(() => {
     document.title = "Contáctanos - Aguanta la Música";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -36,18 +42,68 @@ const Contact = () => {
       metaDescription.setAttribute("content", "Ponte en contacto con nosotros. Agenda tu sesión de musicoterapia o solicita más información sobre nuestros servicios.");
     }
   }, []);
+
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
 
-    // Simulación de envío
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log("Formulario enviado:", data);
-    toast({
-      title: "¡Mensaje enviado!",
-      description: "Gracias por contactarnos. Te responderemos pronto."
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateAdminId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN;
+    const templateUserId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_USER;
+
+    if (!publicKey || !serviceId || !templateAdminId || !templateUserId) {
+      toast({
+        title: "Error de configuración",
+        description: "El servicio de correo no está configurado correctamente.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const now = new Date();
+    const submittedAt = now.toLocaleString("es-CO", {
+      dateStyle: "full",
+      timeStyle: "short"
     });
-    form.reset();
-    setIsSubmitting(false);
+
+    const payloadAdmin = {
+      from_name: data.nombre,
+      from_email: data.email,
+      phone: data.telefono || "No proporcionado",
+      subject: data.asunto,
+      message: data.mensaje,
+      page_url: window.location.href,
+      submitted_at: submittedAt
+    };
+
+    const payloadUser = {
+      to_name: data.nombre,
+      to_email: data.email
+    };
+
+    try {
+      // Enviar correo al admin (David)
+      await emailjs.send(serviceId, templateAdminId, payloadAdmin, publicKey);
+      
+      // Enviar correo de confirmación al usuario
+      await emailjs.send(serviceId, templateUserId, payloadUser, publicKey);
+
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Gracias por contactarnos. Te responderemos pronto."
+      });
+      form.reset();
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+      toast({
+        title: "Error al enviar",
+        description: "No se pudo enviar el mensaje. Por favor, intenta de nuevo más tarde.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-5xl">
@@ -133,6 +189,16 @@ const Contact = () => {
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input type="email" placeholder="tu@email.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>} />
+
+                <FormField control={form.control} name="telefono" render={({
+                field
+              }) => <FormItem>
+                      <FormLabel>Teléfono (opcional)</FormLabel>
+                      <FormControl>
+                        <Input type="tel" placeholder="+57 300 123 4567" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>} />
