@@ -12,9 +12,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const formSchema = z.object({
   nombre: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(100),
-  email: z.string().email("Email inválido").max(255),
+  correo: z.string().email("Correo inválido").max(255),
   telefono: z.string().optional(),
-  asunto: z.string().min(3, "El asunto debe tener al menos 3 caracteres").max(200),
+  sujeto: z.string().min(3, "El asunto debe tener al menos 3 caracteres").max(200),
   mensaje: z.string().min(10, "El mensaje debe tener al menos 10 caracteres").max(1000)
 });
 
@@ -28,9 +28,9 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       nombre: "",
-      email: "",
+      correo: "",
       telefono: "",
-      asunto: "",
+      sujeto: "",
       mensaje: ""
     }
   });
@@ -48,8 +48,8 @@ const Contact = () => {
 
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateAdminId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN;
-    const templateUserId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_USER;
+    const templateAdminId = import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID;
+    const templateUserId = import.meta.env.VITE_EMAILJS_TEMPLATE_USER_ID;
 
     if (!publicKey || !serviceId || !templateAdminId || !templateUserId) {
       toast({
@@ -61,37 +61,31 @@ const Contact = () => {
       return;
     }
 
-    const now = new Date();
-    const submittedAt = now.toLocaleString("es-CO", {
-      dateStyle: "full",
-      timeStyle: "short"
-    });
-
-    const payloadAdmin = {
-      from_name: data.nombre,
-      from_email: data.email,
-      phone: data.telefono || "No proporcionado",
-      subject: data.asunto,
-      message: data.mensaje,
-      page_url: window.location.href,
-      submitted_at: submittedAt
+    const adminParams = {
+      "de_nombre": data.nombre,
+      "de_correo_electrónico": data.correo,
+      "teléfono": data.telefono || "No proporcionado",
+      "sujeto": data.sujeto,
+      "mensaje": data.mensaje,
+      "url_de_la_página": window.location.href,
+      "enviado_a": "david.caycedo@aguantalamusica.com"
     };
 
-    const payloadUser = {
-      to_name: data.nombre,
-      to_email: data.email
+    const userParams = {
+      "a_nombre": data.nombre,
+      "al_correo electrónico": data.correo
     };
 
     try {
       // Enviar correo al admin (David)
-      await emailjs.send(serviceId, templateAdminId, payloadAdmin, publicKey);
+      await emailjs.send(serviceId, templateAdminId, adminParams, publicKey);
       
       // Enviar correo de confirmación al usuario
-      await emailjs.send(serviceId, templateUserId, payloadUser, publicKey);
+      await emailjs.send(serviceId, templateUserId, userParams, publicKey);
 
       toast({
         title: "¡Mensaje enviado!",
-        description: "Gracias por contactarnos. Te responderemos pronto."
+        description: "Revisa tu correo. Gracias por contactarnos."
       });
       form.reset();
     } catch (error) {
@@ -183,10 +177,10 @@ const Contact = () => {
                       <FormMessage />
                     </FormItem>} />
 
-                <FormField control={form.control} name="email" render={({
+                <FormField control={form.control} name="correo" render={({
                 field
               }) => <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>Correo electrónico</FormLabel>
                       <FormControl>
                         <Input type="email" placeholder="tu@email.com" {...field} />
                       </FormControl>
@@ -203,7 +197,7 @@ const Contact = () => {
                       <FormMessage />
                     </FormItem>} />
 
-                <FormField control={form.control} name="asunto" render={({
+                <FormField control={form.control} name="sujeto" render={({
                 field
               }) => <FormItem>
                       <FormLabel>Asunto</FormLabel>
